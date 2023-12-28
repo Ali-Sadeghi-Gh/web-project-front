@@ -6,5 +6,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="jquery-nice-select" level="application" />
+    <orderEntry type="library" name="slick-carousel" level="application" />
   </component>
 </module>
