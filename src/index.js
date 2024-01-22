@@ -1,26 +1,23 @@
-import ReactDOM from "react-dom/client";
-import { BrowserRouter, Routes, Route} from "react-router-dom";
-import Layout from "./pages/Layout";
-// import Home from "./pages/Home";
-// import Login from "./pages/Login";
-// import Game from "./pages/Game";
-import NoPage from "./pages/NoPage";
-import './index.css';
+import React from "react";
+import ReactDOM from "react-dom";
 
-export default function App() {
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          {/*<Route index element={<Home />} />*/}
-          {/*<Route path="login" element={<Login />} />*/}
-          {/*<Route path="game" element={<Game />} />*/}
-          <Route path="*" element={<NoPage />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
-  );
-}
+import App from "./App";
+import "bootstrap/dist/css/bootstrap.css";
+import "remixicon/fonts/remixicon.css";
+import "./index.css";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<App />);
+import store from "./store/store";
+import { Provider } from "react-redux";
+
+import { BrowserRouter as Router } from "react-router-dom";
+
+ReactDOM.render(
+  <React.StrictMode>
+    <Router>
+      <Provider store={store}>
+        <App />
+      </Provider>
+    </Router>
+  </React.StrictMode>,
+  document.getElementById("root")
+);
