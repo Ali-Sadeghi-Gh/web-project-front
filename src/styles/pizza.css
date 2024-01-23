@@ -1,0 +1,183 @@
+/* Global */
+
+* {
+    box-sizing: border-box;
+  }
+
+  
+  button {
+    background-color: #df2020;
+    border: none;
+    color: white;
+    padding: 1%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 1rem;
+    font-size: 1.15rem;
+    margin: 1%;
+    text-align:center;
+    transition: all 0.2s;
+  }
+  
+  button:hover {
+    background-color: #212245;
+  }
+  
+  /* Header Component */
+
+  
+  /* Build Component */
+  
+  .pizza-container {
+    margin: auto;
+    width: 40vw;
+    min-width: 375px;
+    padding: 10px;
+  }
+  
+  .pizza {
+    margin: auto;
+    width: 25vw;
+    min-width: 350px;
+    position: relative;
+  }
+  
+  .pizza-topping {
+    position: absolute;
+    margin-top: -100px;
+  }
+  
+  .pizza-topping-img {
+    width: 100%;
+  }
+  
+  .list-container {
+    margin: auto;
+    width: 40vw;
+    min-width: 375px;
+  }
+  
+  .list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    margin-top: 1%;
+    margin-bottom: 2.5%;
+    width: 50%;
+  }
+  
+  .list-description {
+    margin-top: 1%;
+    font-size: 1.1rem;
+    text-align: center;
+    font-style: italic;
+  }
+  
+  .list-item {
+    border-radius: 16px;
+    display: block;
+    flex-wrap: flex;
+    margin: auto;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    width: 45%;
+    padding: 0.5%;
+  }
+
+  .selected{
+    background-color: green;
+  }
+  
+
+  
+  .functions {
+    margin: auto;
+    width: 41vw;
+    min-width: 375px;
+    padding: 0.1rem;;
+    display: flex;
+    
+  }
+  
+  .functions-reset {
+    border-radius: 100px;
+    flex: 1;
+    margin-right: 2%;
+    padding: 2.5%;
+    background: #df2020;
+  }
+  
+
+  
+  /* Responsive */
+  @media screen and (max-width: 1024px) {
+    button {
+      font-size: 1.1rem;
+    }
+  
+    .pizza-container {
+      width: 50vw;
+    }
+  
+    .list-container {
+      width: 50vw;
+    }
+  
+    .functions-container {
+      width: 51vw;
+    }
+  
+    .list {
+      width: 60%;
+    }
+    
+    .functions {
+      width: 60%;
+    }
+  }
+  
+  @media screen and (max-width: 860px) {
+    .pizza-container {
+      width: 65vw;
+    }
+  
+    .list-container {
+      width: 65vw;
+    }
+  
+    .functions-container {
+      width: 66vw;
+    }
+  
+    .list {
+      width: 70%;
+    }
+    
+    .functions {
+      width: 70%;
+    }
+  }
+  
+  @media screen and (max-width: 400px) {
+    .pizza-container {
+      width: 75vw;
+    }
+  
+    .list-container {
+      width: 75vw;
+    }
+  
+    .functions-container {
+      width: 76vw;
+    }
+  
+    .list {
+      width: 70%;
+    }
+    
+    .functions {
+      width: 90%;
+    }
+  }
+  
