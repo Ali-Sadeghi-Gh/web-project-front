@@ -32,8 +32,6 @@ const nav__links = [
 const Header = () => {
 
 
-
-
   const menuRef = useRef(null);
   const headerRef = useRef(null);
   const totalQuantity = useSelector((state) => state.cart.totalQuantity);
@@ -42,9 +40,6 @@ const Header = () => {
   const toggleMenu = () => menuRef.current.classList.toggle("show__menu");
   let navigate = useNavigate();
 
-  const toggleCart = () => {
-    dispatch(cartUiActions.toggle());
-  };
 
   console.log(menuRef?.current?.classList.value);
 
@@ -64,21 +59,6 @@ const Header = () => {
   }, []);
 
   const isLoggedIn = false;
-  var right_div = <> </>;
-  if (isLoggedIn) {
-    right_div = <>
-      <div className="nav__right d-flex align-items-center gap-4">
-        <span className="cart__icon" onClick={toggleCart}>
-          <i className="ri-shopping-basket-line"></i>
-          <span className="cart__badge">{totalQuantity}</span>
-        </span>
-
-        <span className="mobile__menu" onClick={toggleMenu}>
-          <i className="ri-menu-line"></i>
-        </span>
-      </div>
-    </>;
-  }
 
 
   return (
@@ -116,10 +96,6 @@ const Header = () => {
           </div>
 
           {/* ======== nav right icons ========= */}
-          <div>
-            {right_div}
-          </div>
-
 
         </div>
       </Container>

@@ -18,7 +18,7 @@ const Signup = (props) => {
 
         // Check if the user has entered both fields correctly
         if ("" === username) {
-            setUsernamelError("Please enter your username")
+            setUsernameError("Please enter your username")
             return
         }
 

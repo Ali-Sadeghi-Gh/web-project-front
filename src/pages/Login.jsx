@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import '../styles/forms.css'
 
@@ -18,7 +18,7 @@ const Login = (props) => {
 
         // Check if the user has entered both fields correctly
         if ("" === username) {
-            setUsernamelError("Please enter your username")
+            setUsernameError("Please enter your username")
             return
         }
 
@@ -33,7 +33,6 @@ const Login = (props) => {
         }
 
         // Authentication calls will be made here...       
-
     }
 
     return <div className="mainContainer">
