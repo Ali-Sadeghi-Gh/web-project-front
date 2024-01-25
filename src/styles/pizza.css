@@ -106,23 +106,32 @@
     background-color: green;
   }
   
+  .left-functions{
+    width: 50%;
+    float: left;
+  }
+
+  .right-functions{
+    width: 50%;
+    float: right;
+  }
 
   
   .functions {
     margin: auto;
-    width: 41vw;
-    min-width: 375px;
+    width: 100%;
     padding: 0.1rem;;
     display: flex;
-    
   }
+
   
   .functions-reset {
     border-radius: 100px;
     flex: 1;
     margin-top: 2%;
-    width: 50%;
+    width: 80%;
     margin-bottom: 5%;
+    margin-left: 10%;
     padding: 2.5%;
     background: #df2020;
   }
@@ -131,20 +140,22 @@
 
 .leftdiv {
     float: left;
+    margin-left: 2%;
     width: 25%;
-    height: 380px;
+    height: 350px;
 }
 
 .middlediv {
     float: left;
-    width: 50%;
-    height: 380px;
+    width: 46%;
+    height: 350px;
 }
 
 .rightdiv {
     float: right;
     width: 25%;
-    height: 380px;
+    margin-right: 2%;
+    height: 350px;
 }
 
 
