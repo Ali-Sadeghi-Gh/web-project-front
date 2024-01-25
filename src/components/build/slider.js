@@ -21,7 +21,7 @@ function Slidebar({name, updateToppings, toppings}){
   return(
 
 
-    <div style={{ width: 300, margin: 'auto' }}>
+    <div style={{ width: 'auto', margin: 'auto' }}>
           <div style={{fontStyle: 'italic', fontFamily: "Times New Roman"}}>{name}</div>
           <div>
           <Slider dots

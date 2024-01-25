@@ -30,16 +30,14 @@
   /* Build Component */
   
   .pizza-container {
-    margin: auto;
-    width: 40vw;
-    min-width: 375px;
+    width: 50%;
+    margin-left: 25%;
     padding: 10px;
   }
   
   .pizza {
     margin: auto;
-    width: 25vw;
-    min-width: 350px;
+    width: auto;
     position: relative;
   }
   
@@ -122,7 +120,9 @@
   .functions-reset {
     border-radius: 100px;
     flex: 1;
-    margin-right: 2%;
+    margin-top: 2%;
+    width: 50%;
+    margin-bottom: 5%;
     padding: 2.5%;
     background: #df2020;
   }
@@ -132,31 +132,33 @@
 .leftdiv {
     float: left;
     width: 25%;
-    height: 280px;
+    height: 380px;
 }
 
 .middlediv {
     float: left;
     width: 50%;
-    height: 280px;
+    height: 380px;
 }
 
 .rightdiv {
     float: right;
     width: 25%;
-    height: 280px;
+    height: 380px;
 }
 
 
   
   /* Responsive */
   @media screen and (max-width: 1024px) {
+    .pizza-container {
+      width: 70%;
+      margin-left: 15%;
+      padding: 10px;
+    }
+
     button {
       font-size: 1.1rem;
-    }
-  
-    .pizza-container {
-      width: 50vw;
     }
   
     .list-container {
@@ -177,9 +179,6 @@
   }
   
   @media screen and (max-width: 860px) {
-    .pizza-container {
-      width: 65vw;
-    }
   
     .list-container {
       width: 65vw;
@@ -199,9 +198,6 @@
   }
   
   @media screen and (max-width: 400px) {
-    .pizza-container {
-      width: 75vw;
-    }
   
     .list-container {
       width: 75vw;
