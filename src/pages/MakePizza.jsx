@@ -5,34 +5,33 @@ import Build from '../components/build';
 function Pizzas() {
   
   const [toppings, setToppings] = useState({
-    cheese: false,
-    olive: false,
-    pineapple: false,
-    mushroom: false,
-    tomato: false,
-    greenPepper: false,
-    ham: false,
-    bacon: false,
-    pepperoni: false,
-    sausage: false
+    cheese: 0,
+    olive: 0,
+    pineapple: 0,
+    mushroom: 0,
+    tomato: 0,
+    greenPepper: 0,
+    ham: 0,
+    bacon: 0,
+    pepperoni: 0,
+    sausage: 0
   });
 
   const resetToppings = () => {
     setToppings({
-      cheese: false,
-      olive: false,
-      pineapple: false,
-      mushroom: false,
-      tomato: false,
-      greenPepper: false,
-      ham: false,
-      bacon: false,
-      pepperoni: false,
-      sausage: false
+      cheese: 0,
+      olive: 0,
+      pineapple: 0,
+      mushroom: 0,
+      tomato: 0,
+      greenPepper: 0,
+      ham: 0,
+      bacon: 0,
+      pepperoni: 0,
+      sausage: 0
     });
     localStorage.clear();
   };
-
   useEffect(() => {
     // load toppings saved from local storage
     const data = localStorage.getItem("toppings");
@@ -52,3 +51,5 @@ function Pizzas() {
 }
 
 export default Pizzas;
+
+

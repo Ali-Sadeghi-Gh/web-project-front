@@ -1,26 +1,97 @@
 import React from 'react';
 import '../../styles/pizza.css'
 import {useState } from "react";
+import Slidebar from './slider'
 
-function ToppingList({toppings, updateToppings}) {
-  // console.log(toppings)
+function ToppingList({toppings, updateToppings, isLeft}) {
   const newToppings = JSON.parse(JSON.stringify(toppings)); // deep copy state
-
-  return (
-    <div className="list-container" >
-      <div className="list">
-        <button className={newToppings["cheese"] ? "list-item selected" : "list-item"} onClick={() => updateToppings("cheese")}>Cheese</button>
-        <button className={newToppings["pepperoni"] ? "list-item selected" : "list-item"} onClick={() => updateToppings("pepperoni")}>Pepperoni</button>
-        <button className={newToppings["olive"] ? "list-item selected" : "list-item" } onClick={() => updateToppings("olive")}>Olive</button>
-        <button className={newToppings["pineapple"] ? "list-item selected" : "list-item" } onClick={() => updateToppings("pineapple")}>Pineapple</button>
-        <button className={newToppings["mushroom"] ? "list-item selected" : "list-item"} onClick={() => updateToppings("mushroom")}>Mushroom</button>
-        <button className={newToppings["greenPepper"] ? "list-item selected" : "list-item"} onClick={() => updateToppings("greenPepper")}>Green Pepper</button>
-        <button className={newToppings["ham"] ? "list-item selected" : "list-item"} onClick={() => updateToppings("ham")}>Ham</button>
-        <button className={newToppings["bacon"] ? "list-item selected" : "list-item"} onClick={() => updateToppings("bacon")}>Bacon</button>
-        <button className={newToppings["sausage"] ? "list-item selected" : "list-item"} onClick={() => updateToppings("sausage")}>Sausage</button>
-        <button className={newToppings["tomato"] ? "list-item selected" : "list-item"} onClick={() => updateToppings("tomato")}>Tomato</button>
+  var code_block = null
+  if (isLeft){
+    code_block = <div>
+      <div>
+        <div>
+          <Slidebar 
+          name={'cheese'}
+          updateToppings = {updateToppings}
+          toppings = {toppings}
+          />
+        </div>
+        <div>
+          <Slidebar 
+          name={'pepperoni'}
+          updateToppings = {updateToppings}
+          toppings = {toppings}
+          />
+        </div>
+        <div>
+          <Slidebar 
+          name={'olive'}
+          updateToppings = {updateToppings}
+          toppings = {toppings}
+          />
+        </div>
+        <div>
+          <Slidebar 
+          name={'pineapple'}
+          updateToppings = {updateToppings}
+          toppings = {toppings}
+          />
+        </div>
+        <div>
+          <Slidebar 
+          name={'mushroom'}
+          updateToppings = {updateToppings}
+          toppings = {toppings}
+          />
+        </div>
       </div>
     </div>
+  }
+  else{
+    code_block = <div>
+            <div>
+        <div>
+          <Slidebar 
+          name={'greenPepper'}
+          updateToppings = {updateToppings}
+          toppings = {toppings}
+          />
+        </div>
+        <div>
+          <Slidebar 
+          name={'ham'}
+          updateToppings = {updateToppings}
+          toppings = {toppings}
+          />
+        </div>
+        <div>
+          <Slidebar 
+          name={'bacon'}
+          updateToppings = {updateToppings}
+          toppings = {toppings}
+          />
+        </div>
+        <div>
+          <Slidebar 
+          name={'sausage'}
+          updateToppings = {updateToppings}
+          toppings = {toppings}
+          />
+        </div>
+        <div>
+          <Slidebar 
+          name={'tomato'}
+          updateToppings = {updateToppings}
+          toppings = {toppings}
+          />
+        </div>
+      </div>
+    </div>
+  }
+  return (
+    <>
+      {code_block}
+    </>
   );
 };
 

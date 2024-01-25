@@ -19,7 +19,7 @@ function Pizza({toppings}) {
         <div className="pizza" >
           <motion.div
             initial={{ opacity: 0 }}
-            animate={{y: toppings["cheese"] ? 100: 100, opacity: toppings["cheese"] ? 1 : 0}}
+            animate={{y: toppings["cheese"] ? 100: 100, opacity: (toppings["cheese"] != 0) ? 1 : 0}}
             transition={{ duration: 0.5 }}
             className="pizza-topping"
           >
@@ -27,7 +27,7 @@ function Pizza({toppings}) {
           </motion.div>
           <motion.div
             initial={{ opacity: 0 }}
-            animate={{y: toppings["pepperoni"] ? 100: 100, opacity: toppings["pepperoni"] ? 1 : 0}}
+            animate={{y: toppings["pepperoni"] ? 100: 100, opacity: (toppings["pepperoni"] != 0) ? 1 : 0}}
             transition={{ duration: 0.5 }}
             className="pizza-topping"
           >
@@ -35,7 +35,7 @@ function Pizza({toppings}) {
           </motion.div>
           <motion.div
             initial={{ opacity: 0 }}
-            animate={{y: toppings["olive"] ? 100: 100, opacity: toppings["olive"] ? 1 : 0}}
+            animate={{y: toppings["olive"] ? 100: 100, opacity: (toppings["olive"] != 0) ? 1 : 0}}
             transition={{ duration: 0.5 }}
             className="pizza-topping"
           >
@@ -43,7 +43,7 @@ function Pizza({toppings}) {
           </motion.div>
           <motion.div
             initial={{ opacity: 0 }}
-            animate={{y: 100, opacity: toppings["pineapple"] ? 1 : 0}}
+            animate={{y: 100, opacity: (toppings["pineapple"] != 0) ? 1 : 0}}
             transition={{ duration: 0.5 }}
             className="pizza-topping"
           >
@@ -51,7 +51,7 @@ function Pizza({toppings}) {
           </motion.div>
           <motion.div
             initial={{ opacity: 0 }}
-            animate={{y: toppings["mushroom"] ? 100: 100, opacity: toppings["mushroom"] ? 1 : 0}}
+            animate={{y: toppings["mushroom"] ? 100: 100, opacity: (toppings["mushroom"] != 0) ? 1 : 0}}
             transition={{ duration: 0.5 }}
             className="pizza-topping"
           >
@@ -59,7 +59,7 @@ function Pizza({toppings}) {
           </motion.div>
           <motion.div
             initial={{ opacity: 0 }}
-            animate={{y: toppings["greenPepper"] ? 100: 100, opacity: toppings["greenPepper"] ? 1 : 0}}
+            animate={{y: toppings["greenPepper"] ? 100: 100, opacity: (toppings["greenPepper"] != 0) ? 1 : 0}}
             transition={{ duration: 0.5 }}
             className="pizza-topping"
           >
@@ -67,7 +67,7 @@ function Pizza({toppings}) {
           </motion.div>
           <motion.div
             initial={{ opacity: 0 }}
-            animate={{y: toppings["ham"] ? 100: 100, opacity: toppings["ham"] ? 1 : 0}}
+            animate={{y: toppings["ham"] ? 100: 100, opacity: (toppings["ham"] != 0) ? 1 : 0}}
             transition={{ duration: 0.5 }}
             className="pizza-topping"
           >
@@ -75,7 +75,7 @@ function Pizza({toppings}) {
           </motion.div>
           <motion.div
             initial={{ opacity: 0 }}
-            animate={{y: toppings["bacon"] ? 100: 100, opacity: toppings["bacon"] ? 1 : 0}}
+            animate={{y: toppings["bacon"] ? 100: 100, opacity: (toppings["bacon"] != 0) ? 1 : 0}}
             transition={{ duration: 0.5 }}
             className="pizza-topping"
           >
@@ -83,7 +83,7 @@ function Pizza({toppings}) {
           </motion.div>
           <motion.div
             initial={{ opacity: 0 }}
-            animate={{y: toppings["sausage"] ? 100: 100, opacity: toppings["sausage"] ? 1 : 0}}
+            animate={{y: toppings["sausage"] ? 100: 100, opacity: (toppings["sausage"] != 0) ? 1 : 0}}
             transition={{ duration: 0.5 }}
             className="pizza-topping"
           >
@@ -91,7 +91,7 @@ function Pizza({toppings}) {
           </motion.div>
           <motion.div
             initial={{ opacity: 0 }}
-            animate={{y: toppings["tomato"] ? 100: 100, opacity: toppings["tomato"] ? 1 : 0}}
+            animate={{y: toppings["tomato"] ? 100: 100, opacity: (toppings["tomato"] != 0) ? 1 : 0}}
             transition={{ duration: 0.5 }}
             className="pizza-topping"
           >

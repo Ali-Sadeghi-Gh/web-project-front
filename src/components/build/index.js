@@ -1,14 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Pizza from './pizza';
 import ToppingList from './toppingList';
 import Reset from './reset';
 import '../../styles/pizza.css'
 
 function Build({toppings, setToppings, resetToppings}) {
-  
-  const updateToppings = name => {
+  const updateToppings = (name, value) => {
     let newToppings = JSON.parse(JSON.stringify(toppings)); // deep copy state
-    newToppings[name] = !newToppings[name];
+    newToppings[name] = value;
 
     setToppings(newToppings);
     localStorage.setItem("toppings", JSON.stringify(newToppings));
@@ -16,8 +15,15 @@ function Build({toppings, setToppings, resetToppings}) {
 
   return (
     <div>
-      <Pizza toppings={toppings} />
-      <ToppingList toppings={toppings} updateToppings={updateToppings}/>
+      <div className='leftdiv'>
+        <ToppingList toppings={toppings} updateToppings={updateToppings} isLeft={true}/>
+      </div>
+      <div className='middlediv'>
+        <Pizza toppings={toppings} />
+      </div>
+      <div className='rightdiv'>
+        <ToppingList toppings={toppings} updateToppings={updateToppings} isLeft={false}/>
+      </div>      
       <Reset resetToppings={resetToppings}/>
     </div>
   );
