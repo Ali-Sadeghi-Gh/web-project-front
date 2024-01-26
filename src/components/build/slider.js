@@ -36,7 +36,7 @@ function Slidebar({name, updateToppings, toppings}){
               borderColor: "red",
               height: 5,
               width: 5,
-              marginTop: 0,
+              marginTop: -0.5,
               backgroundColor: "red"
             }}
             
