@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 import { Container } from "reactstrap";
 import logo from "../../assets/images/res-logo.png";
+import hamburger from "../../assets/images/Hamburger.png";
 import { NavLink, Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 
@@ -93,10 +94,11 @@ const Header = () => {
                 </NavLink>
               ))}
             </div>
+
           </div>
 
           {/* ======== nav right icons ========= */}
-
+          
         </div>
       </Container>
     </header>
