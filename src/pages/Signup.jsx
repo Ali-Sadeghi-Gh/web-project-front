@@ -72,6 +72,7 @@ const Signup = (props) => {
             return
         }
         alert("done")
+        
         // Authentication calls will be made here...       
 
     }

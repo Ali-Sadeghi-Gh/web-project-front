@@ -1,10 +1,10 @@
 import "../styles/contact.css";
 
-const Contact = () => {
+const Profile = () => {
   return (
     <>
     </>
   );
 };
 
-export default Contact;
+export default Profile;

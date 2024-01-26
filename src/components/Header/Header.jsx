@@ -11,6 +11,12 @@ import { useSelector, useDispatch } from "react-redux";
 import "../../styles/hero-section.css";
 import "../../styles/header.css";
 
+const token = localStorage.getItem("token");
+var isLoggedIn = true;
+if(token == null){
+  isLoggedIn = false;
+}
+
 const nav__links = [
   {
     display: "Home",
@@ -24,11 +30,21 @@ const nav__links = [
     display: "Cart",
     path: "/cart",
   },
-  {
-    display: "Contact",
-    path: "/contact",
-  },
+  
 ];
+if (isLoggedIn){
+  nav__links.push({
+    display: "Profile",
+    path: "/profile",
+  });
+}
+else{
+  nav__links.push({
+    display: "Login",
+    path: "/login",
+  });
+}
+
 
 const Header = () => {
 

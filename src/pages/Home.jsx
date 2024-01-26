@@ -8,13 +8,19 @@ import guyImg from "../assets/images/delivery-guy.png";
 import "../styles/hero-section.css";
 
 const Home = () => {
-  const isLoggedIn = false;
+  const token = localStorage.getItem("token");
+  console.log(token == null)
+  var isLoggedIn = true;
+  if(token == null){
+    isLoggedIn = false;
+  }
+
   var order_button = <> </>;
   if (isLoggedIn) {
     order_button = <>
       <button className="order__btn d-flex align-items-center justify-content-between ">
-        <Link to="/pizzas">
-          order
+        <Link to="/makePizzas">
+          Order
           <i className="ri-arrow-right-s-line"></i>
         </Link>
       </button>
@@ -23,8 +29,8 @@ const Home = () => {
   else {
     order_button = <>
       <button className="order__btn d-flex align-items-center justify-content-between ">
-        <Link to="/login">
-          login
+        <Link to="/Login">
+          Login
           <i className="ri-arrow-right-s-line"></i>
         </Link>
       </button>
