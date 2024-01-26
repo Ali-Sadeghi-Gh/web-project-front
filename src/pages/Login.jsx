@@ -32,6 +32,7 @@ const Login = (props) => {
             return
         }
 
+        alert("done")
         // Authentication calls will be made here...       
     }
 
@@ -52,6 +53,7 @@ const Login = (props) => {
         <br />
         <div className={"inputContainer"}>
             <input
+                type="password"
                 value={password}
                 placeholder="password"
                 onChange={ev => setPassword(ev.target.value)}
@@ -68,7 +70,7 @@ const Login = (props) => {
         </div>
 
         <div>
-            don't have a account?
+            Don't have an account?
             <Link className="signup_text" to="/signup">
                 sign up
             </Link>

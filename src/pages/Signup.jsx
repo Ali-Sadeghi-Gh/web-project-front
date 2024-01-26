@@ -5,8 +5,14 @@ import '../styles/forms.css'
 const Signup = (props) => {
     const [username, setUsername] = useState("")
     const [password, setPassword] = useState("")
+    const [passwordConfirm, setPasswordConfirm] = useState("")
+    const [phone, setPhone] = useState("")
+    const [address, setAddress] = useState("")
     const [usernameError, setUsernameError] = useState("")
     const [passwordError, setPasswordError] = useState("")
+    const [passwordConfirmError, setPasswordConfirmError] = useState("")
+    const [phoneError, setPhoneError] = useState("")
+    const [addressError, setAddressError] = useState("")
 
     const navigate = useNavigate();
 
@@ -15,6 +21,9 @@ const Signup = (props) => {
         // Set initial error values to empty
         setUsernameError("")
         setPasswordError("")
+        setPasswordConfirmError("")
+        setPhoneError("")
+        setAddressError("")
 
         // Check if the user has entered both fields correctly
         if ("" === username) {
@@ -32,6 +41,37 @@ const Signup = (props) => {
             return
         }
 
+        if ("" === passwordConfirm) {
+            setPasswordConfirmError("Please confirm your password")
+            return
+        }
+
+        if (password != passwordConfirm) {
+            setPasswordConfirmError("The comfirmation doesn't match the password")
+            return
+        }
+
+        if ("" === phone) {
+            setPhoneError("Please enter your phone number")
+            return
+        }
+
+        let phoneNumber = Number(phone)
+        if (isNaN(phoneNumber)) {
+            setPhoneError("Please enter a number")
+            return
+        }
+
+        if (phoneNumber > 10000000000 || phoneNumber < 9000000000) {
+            setPhoneError("Invalid phone number")
+            return
+        }
+
+        if ("" === address) {
+            setAddressError("Please enter your address")
+            return
+        }
+        alert("done")
         // Authentication calls will be made here...       
 
     }
@@ -53,11 +93,40 @@ const Signup = (props) => {
         <br />
         <div className={"inputContainer"}>
             <input
+                type="password"
                 value={password}
                 placeholder="password"
                 onChange={ev => setPassword(ev.target.value)}
                 className={"inputBox"} />
             <label className="errorLabel">{passwordError}</label>
+        </div>
+        <br />
+        <div className={"inputContainer"}>
+            <input
+                type="password"
+                value={passwordConfirm}
+                placeholder="password confirmation"
+                onChange={ev => setPasswordConfirm(ev.target.value)}
+                className={"inputBox"} />
+            <label className="errorLabel">{passwordConfirmError}</label>
+        </div>
+        <br />
+        <div className={"inputContainer"}>
+            <input
+                value={phone}
+                placeholder="phone number"
+                onChange={ev => setPhone(ev.target.value)}
+                className={"inputBox"} />
+            <label className="errorLabel">{phoneError}</label>
+        </div>
+        <br />
+        <div className={"inputContainer"}>
+            <input
+                value={address}
+                placeholder="address"
+                onChange={ev => setAddress(ev.target.value)}
+                className={"inputBox"} />
+            <label className="errorLabel">{addressError}</label>
         </div>
         <br />
         <div className={"inputContainer"}>
@@ -69,7 +138,7 @@ const Signup = (props) => {
         </div>
 
         <div>
-            Have a account?
+            Have an account?
             <Link className="signup_text" to="/login">
                 login
             </Link>
