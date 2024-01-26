@@ -16,6 +16,7 @@ var isLoggedIn = true;
 if(token == null){
   isLoggedIn = false;
 }
+isLoggedIn = true;
 
 const nav__links = [
   {
@@ -74,9 +75,7 @@ const Header = () => {
 
     return () => window.removeEventListener("scroll");
   }, []);
-
-  const isLoggedIn = false;
-
+  
 
   return (
     <header className="header" ref={headerRef}>
