@@ -125,7 +125,7 @@
   }
 
   
-  .functions-reset {
+  .functions-button {
     border-radius: 100px;
     flex: 1;
     margin-top: 2%;
@@ -134,6 +134,27 @@
     margin-left: 10%;
     padding: 2.5%;
     background: #df2020;
+    border: 2px solid #df2020;
+  }
+
+  .functions-price {
+    border-radius: 100px;
+    flex: 1;
+    margin-top: 2%;
+    width: 80%;
+    margin-bottom: 5%;
+    margin-left: 10%;
+    padding: 2.5%;
+    background: white;
+    font-weight: bold;
+    color: #df2020;
+    border: 2px solid #df2020;
+    cursor: default;
+  }
+
+  .functions-price:hover {
+    cursor: default;  
+    background-color: white;
   }
   
 

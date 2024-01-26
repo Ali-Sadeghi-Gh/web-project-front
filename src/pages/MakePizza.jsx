@@ -3,7 +3,7 @@ import Build from '../components/build';
 
 
 function Pizzas() {
-  
+  const [price, setPrice] = useState(0)
   const [toppings, setToppings] = useState({
     cheese: 0,
     olive: 0,
@@ -30,8 +30,10 @@ function Pizzas() {
       pepperoni: 0,
       sausage: 0
     });
+    setPrice(0);
     localStorage.clear();
   };
+
   useEffect(() => {
     // load toppings saved from local storage
     const data = localStorage.getItem("toppings");
@@ -39,12 +41,38 @@ function Pizzas() {
       setToppings(JSON.parse(data));
   }, []);
 
+  useEffect(() => {
+    // load price saved from local storage
+    const data = localStorage.getItem("price");
+    if (data)
+      setPrice(JSON.parse(data));
+  }, []);
+
+  const updatePrice = (newToppings) => {
+    let newPrice = newToppings["cheese"] * 10000
+    setPrice(newPrice);
+    localStorage.setItem("price", JSON.stringify(newPrice));
+  }
+
+  const addToCart = () => {
+    //todo
+  }
+
+  const addToMyPizzas = () => {
+    //todo
+  }
+
+
   return (
     <div className="App">
       <Build
           toppings={toppings}
           setToppings={setToppings}
           resetToppings={resetToppings}
+          addToCart={addToCart}
+          addToMyPizzas={addToMyPizzas}
+          updatePrice={updatePrice}
+          price={price}
       />
     </div>
   );

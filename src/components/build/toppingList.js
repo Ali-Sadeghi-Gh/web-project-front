@@ -1,10 +1,8 @@
 import React from 'react';
 import '../../styles/pizza.css'
-import {useState } from "react";
 import Slidebar from './slider'
 
 function ToppingList({toppings, updateToppings, isLeft}) {
-  const newToppings = JSON.parse(JSON.stringify(toppings)); // deep copy state
   var code_block = null
   if (isLeft){
     code_block = <div>
