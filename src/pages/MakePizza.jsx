@@ -4,6 +4,8 @@ import Build from '../components/build';
 
 function Pizzas() {
   const [price, setPrice] = useState(0)
+  const [pizzaName, setPizzaName] = useState("")
+
   const [toppings, setToppings] = useState({
     cheese: 0,
     olive: 0,
@@ -14,7 +16,7 @@ function Pizzas() {
     ham: 0,
     bacon: 0,
     pepperoni: 0,
-    sausage: 0
+    sausage: 0,
   });
 
   const resetToppings = () => {
@@ -28,9 +30,10 @@ function Pizzas() {
       ham: 0,
       bacon: 0,
       pepperoni: 0,
-      sausage: 0
+      sausage: 0,
     });
     setPrice(0);
+    setPizzaName('my pizza')
     localStorage.clear();
   };
 
@@ -48,10 +51,23 @@ function Pizzas() {
       setPrice(JSON.parse(data));
   }, []);
 
+  useEffect(() => {
+    // load price saved from local storage
+    const data = localStorage.getItem("pizzaName");
+    if (data)
+      setPizzaName(JSON.parse(data));
+  }, []);
+
   const updatePrice = (newToppings) => {
     let newPrice = newToppings["cheese"] * 10000
     setPrice(newPrice);
     localStorage.setItem("price", JSON.stringify(newPrice));
+  }
+
+
+  const updatePizzaName = (value) => {
+    setPizzaName(value);
+    localStorage.setItem("pizzaName", JSON.stringify(value));
   }
 
   const addToCart = () => {
@@ -73,6 +89,8 @@ function Pizzas() {
           addToMyPizzas={addToMyPizzas}
           updatePrice={updatePrice}
           price={price}
+          updatePizzaName={updatePizzaName}
+          pizzaName={pizzaName}
       />
     </div>
   );

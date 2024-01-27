@@ -50,7 +50,7 @@ function ToppingList({toppings, updateToppings, isLeft}) {
             <div>
         <div>
           <Slidebar 
-          name={'green pepper'}
+          name={'greenPepper'}
           updateToppings = {updateToppings}
           toppings = {toppings}
           />

@@ -1,5 +1,4 @@
 import Slider from 'rc-slider';
-import React, { useState } from 'react';
 import 'rc-slider/assets/index.css';
 
 function Slidebar({name, updateToppings, toppings}){
@@ -19,8 +18,6 @@ function Slidebar({name, updateToppings, toppings}){
   };
 
   return(
-
-
     <div style={{ width: 'auto', margin: 'auto' }}>
           <div style={{fontStyle: 'italic', fontFamily: "Times New Roman"}}>{name}</div>
           <div>
