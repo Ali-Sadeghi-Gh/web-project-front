@@ -1,6 +1,8 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import '../styles/forms.css'
+import { useNavigate  } from 'react-router-dom';
+
 
 const Signup = (props) => {
     const [username, setUsername] = useState("")
@@ -13,11 +15,10 @@ const Signup = (props) => {
     const [passwordConfirmError, setPasswordConfirmError] = useState("")
     const [phoneError, setPhoneError] = useState("")
     const [addressError, setAddressError] = useState("")
-
     const navigate = useNavigate();
 
-    const onButtonClick = () => {
-
+    const onButtonClick = async () => {
+        
         // Set initial error values to empty
         setUsernameError("")
         setPasswordError("")
@@ -71,9 +72,33 @@ const Signup = (props) => {
             setAddressError("Please enter your address")
             return
         }
-        alert("done")
-        
-        // Authentication calls will be made here...       
+
+        try {
+            const data = {
+                username: username,
+                password: password,
+                phone: phone,
+                address: address,
+            };
+            const response = await fetch('http://127.0.0.1:8000/user/register/', {
+              method: 'POST',
+              body: JSON.stringify(data),
+              headers: {
+                'Content-Type': 'application/json'
+              }
+            });
+            const result = await response.json();
+            const token = result["token"]
+            alert("You signed up successfully")
+            console.log(token)
+            localStorage.setItem("token", JSON.stringify(token));
+
+            navigate('/home');
+
+        } 
+        catch (error) {
+            console.error('Error:', error);
+        }
 
     }
 

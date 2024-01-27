@@ -3,17 +3,17 @@ import Build from '../components/build';
 
 
 function Pizzas() {
-  const [price, setPrice] = useState(0)
+  const [price, setPrice] = useState(20000)
   const [pizzaName, setPizzaName] = useState("")
 
   const [toppings, setToppings] = useState({
     cheese: 0,
     olive: 0,
-    pineapple: 0,
+    corn: 0,
     mushroom: 0,
     tomato: 0,
     greenPepper: 0,
-    ham: 0,
+    jambon: 0,
     bacon: 0,
     pepperoni: 0,
     sausage: 0,
@@ -23,16 +23,16 @@ function Pizzas() {
     setToppings({
       cheese: 0,
       olive: 0,
-      pineapple: 0,
+      corn: 0,
       mushroom: 0,
       tomato: 0,
       greenPepper: 0,
-      ham: 0,
+      jambon: 0,
       bacon: 0,
       pepperoni: 0,
       sausage: 0,
     });
-    setPrice(0);
+    setPrice(20000);
     setPizzaName('my pizza')
     localStorage.clear();
   };
@@ -58,10 +58,25 @@ function Pizzas() {
       setPizzaName(JSON.parse(data));
   }, []);
 
-  const updatePrice = (newToppings) => {
-    let newPrice = newToppings["cheese"] * 10000
-    setPrice(newPrice);
-    localStorage.setItem("price", JSON.stringify(newPrice));
+  const updatePrice = async (newToppings) => {
+    try {
+      const response = await fetch('http://127.0.0.1:8000/shop/calculate-price/', {
+        method: 'POST',
+        body: JSON.stringify(newToppings),
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      });
+      const result = await response.json();
+      const price = result["price"]
+      let newPrice = price
+      setPrice(newPrice);
+      localStorage.setItem("price", JSON.stringify(newPrice));
+    } 
+    catch (error) {
+      // Handle any error that occurred during the request
+      console.error('Error:', error);
+    }
   }
 
 

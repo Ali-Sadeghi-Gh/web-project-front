@@ -9,7 +9,6 @@ import "../styles/hero-section.css";
 
 const Home = () => {
   const token = localStorage.getItem("token");
-  console.log(token == null)
   var isLoggedIn = true;
   if(token == null){
     isLoggedIn = false;
@@ -48,8 +47,6 @@ const Home = () => {
                 <h1 className="mb-4 hero__title">
                   <span>Enjoy</span> your favorite Pizza
                 </h1>
-
-
                 {order_button}
               </div>
             </Col>

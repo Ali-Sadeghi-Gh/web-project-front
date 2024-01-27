@@ -3,9 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 import { Container } from "reactstrap";
 import logo from "../../assets/images/res-logo.png";
-import hamburger from "../../assets/images/Hamburger.png";
-import { NavLink, Link } from "react-router-dom";
-import { useSelector, useDispatch } from "react-redux";
+import { NavLink } from "react-router-dom";
 
 
 import "../../styles/hero-section.css";
@@ -16,7 +14,7 @@ var isLoggedIn = true;
 if(token == null){
   isLoggedIn = false;
 }
-isLoggedIn = true;
+
 
 const nav__links = [
   {
@@ -52,8 +50,6 @@ const Header = () => {
 
   const menuRef = useRef(null);
   const headerRef = useRef(null);
-  const totalQuantity = useSelector((state) => state.cart.totalQuantity);
-  const dispatch = useDispatch();
 
   const toggleMenu = () => menuRef.current.classList.toggle("show__menu");
   let navigate = useNavigate();
