@@ -1,0 +1,55 @@
+.cart-leftdiv {
+    float: left;
+    margin-left: 2%;
+    width: 25%;
+    height: 50px;
+    margin-top: 1%;
+}
+
+.cart-middlediv {
+    float: left;
+    width: 46%;
+    height: 50px;
+
+    margin-top: 1%;
+}
+
+.cart-rightdiv {
+    float: right;
+    width: 25%;
+    margin-right: 2%;
+    height: 50px;
+    margin-top: 1%;
+}
+
+.cart-leftButton{
+    border-radius: '16px';
+    width:'8%';
+    height: '50%';
+    text-align: 'center';
+    background-color: 'red';
+}
+.cart-leftButton:hover{
+    background-color: 'darkred';
+}
+
+
+
+
+.cart-pizza-container {
+    width: 50%;
+}  
+.cart-pizza {
+    margin-left: 76%;
+    width: 50%;
+    position: relative;
+}
+  
+.cart-pizza-topping {
+    position: absolute;
+    margin-top: -100px;
+}
+  
+.cart-pizza-topping-img {
+    width: 100%;
+}

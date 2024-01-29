@@ -91,7 +91,7 @@ const Signup = (props) => {
             const token = result["token"]
             alert("You signed up successfully")
             console.log(token)
-            localStorage.setItem("token", JSON.stringify(token));
+            localStorage.setItem("token", token);
 
             navigate('/home');
 

@@ -10,7 +10,7 @@ const Login = (props) => {
 
     const navigate = useNavigate();
 
-    const onButtonClick = () => {
+    const onButtonClick = async () => {
 
         // Set initial error values to empty
         setUsernameError("")
@@ -31,9 +31,31 @@ const Login = (props) => {
             setPasswordError("The password must be 8 characters or longer")
             return
         }
+        
+        try {
+            const data = {
+                username: username,
+                password: password,
+            };
+            const response = await fetch('http://127.0.0.1:8000/user/login/', {
+              method: 'POST',
+              body: JSON.stringify(data),
+              headers: {
+                'Content-Type': 'application/json'
+              }
+            });
+            const result = await response.json();
+            const token = result["token"]
+            alert("You login successfully")
+            localStorage.setItem("token", token);
 
-        alert("done")
-        // Authentication calls will be made here...       
+            navigate('/home');
+
+        } 
+        catch (error) {
+            console.error('Error:', error);
+        }
+
     }
 
     return <div className="mainContainer">
