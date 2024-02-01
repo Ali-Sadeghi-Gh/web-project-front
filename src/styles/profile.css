@@ -1,5 +1,6 @@
-.main-div{
-  margin-top: 1%;
+.profile-main-div{
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
 
 .profile-leftdiv {
@@ -39,5 +40,7 @@
 }
 
 .profile-img{
+  margin-left: 25%;
+  width: 50%;
   font-family: 'Courier New', Courier, monospace;
 }

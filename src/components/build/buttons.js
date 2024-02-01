@@ -5,7 +5,7 @@ function Functions({resetToppings, addToCart, addToMyPizzas, price}) {
   return (
     <div className="functions">
       <div className="left-functions">
-        <button className="functions-price">
+        <button className="functions-price" disabled>
             Price: {price}T
         </button>
         <button className="functions-button" onClick={() => resetToppings()}>

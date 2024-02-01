@@ -7,6 +7,8 @@ import { useNavigate  } from 'react-router-dom';
 const Signup = (props) => {
     const [username, setUsername] = useState("")
     const [password, setPassword] = useState("")
+    const [fname, setFname] = useState("")
+    const [lname, setLname] = useState("")
     const [passwordConfirm, setPasswordConfirm] = useState("")
     const [phone, setPhone] = useState("")
     const [address, setAddress] = useState("")
@@ -15,6 +17,9 @@ const Signup = (props) => {
     const [passwordConfirmError, setPasswordConfirmError] = useState("")
     const [phoneError, setPhoneError] = useState("")
     const [addressError, setAddressError] = useState("")
+    const [fnameError, setFnameError] = useState("")
+    const [lnameError, setLnameError] = useState("")
+    
     const navigate = useNavigate();
 
     const onButtonClick = async () => {
@@ -25,8 +30,18 @@ const Signup = (props) => {
         setPasswordConfirmError("")
         setPhoneError("")
         setAddressError("")
+        setFnameError("")
+        setLnameError("")
 
         // Check if the user has entered both fields correctly
+        if ("" === fname) {
+            setFnameError("Please enter first name")
+            return
+        }
+        if ("" === username) {
+            setLnameError("Please enter last name")
+            return
+        }
         if ("" === username) {
             setUsernameError("Please enter your username")
             return
@@ -75,6 +90,8 @@ const Signup = (props) => {
 
         try {
             const data = {
+                first_name: fname,
+                last_name: lname,
                 username: username,
                 password: password,
                 phone: phone,
@@ -108,6 +125,22 @@ const Signup = (props) => {
             <div>Sign up</div>
         </div>
         <br />
+        <div className={"inputContainer"}>
+            <input
+                value={fname}
+                placeholder="first name"
+                onChange={ev => setFname(ev.target.value)}
+                className={"inputBox"} />
+            <label className="errorLabel">{usernameError}</label>
+        </div>
+        <div className={"inputContainer"}>
+            <input
+                value={lname}
+                placeholder="last name"
+                onChange={ev => setLname(ev.target.value)}
+                className={"inputBox"} />
+            <label className="errorLabel">{usernameError}</label>
+        </div>
         <div className={"inputContainer"}>
             <input
                 value={username}

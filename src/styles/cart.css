@@ -53,3 +53,56 @@
 .cart-pizza-topping-img {
     width: 100%;
 }
+
+
+.cart-left-functions{
+    width: 50%;
+    float: left;
+}
+
+.cart-right-functions{
+    width: 50%;
+    float: right;
+}
+
+  
+.cart-functions {
+    margin: auto;
+    width: 100%;
+    padding: 0.1rem;;
+    display: flex;
+}
+
+  
+.cart-functions-button {
+    border-radius: 100px;
+    flex: 1;
+    margin-top: 2%;
+    width: 80%;
+    margin-bottom: 5%;
+    margin-left: 10%;
+    padding: 2.5%;
+    background: #df2020;
+    border: 2px solid #df2020;
+}
+
+.cart-functions-price {
+    border-radius: 100px;
+    flex: 1;
+    margin-top: 2%;
+    width: 80%;
+    margin-bottom: 5%;
+    margin-left: 10%;
+    padding: 2.5%;
+    background: white;
+    font-weight: bold;
+    color: #df2020;
+    border: 2px solid #df2020;
+    cursor: default;
+}
+
+.cart-functions-price:hover {
+    cursor: default;  
+    background-color: white;
+}
+  
