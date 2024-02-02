@@ -26,9 +26,14 @@ const nav__links = [
     path: "/makePizzas",
   },
   {
+    display: "My Pizza",
+    path: "/mypizza",
+  },
+  {
     display: "Cart",
     path: "/cart",
   },
+  
   
 ];
 if (isLoggedIn){

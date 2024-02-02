@@ -1,15 +1,16 @@
 import React from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 
-import Home from "../pages/Home";
-import MakePizzas from "../pages/MakePizza";
-import Cart from "../pages/Cart";
-import Profile from "../pages/Profile";
-import NoPage from "../pages/NoPage";
-import Login from "../pages/Login";
-import Signup from "../pages/Signup";
-import Logout from "../pages/Logout";
-import SendPage from "../pages/SendPage";
+import Home from "../pages/Home.jsx";
+import MakePizzas from "../pages/MakePizza.jsx";
+import Cart from "../pages/Cart.jsx";
+import Profile from "../pages/Profile.jsx";
+import NoPage from "../pages/NoPage.jsx";
+import Login from "../pages/Login.jsx";
+import Signup from "../pages/Signup.jsx";
+import Logout from "../pages/Logout.jsx";
+import SendPage from "../pages/SendPage.jsx";
+import MyPizza from "../pages/MyPizza.jsx";
 
 
 const Routers = () => {
@@ -24,6 +25,7 @@ const Routers = () => {
       <Route path="/signup" element={<Signup />} />
       <Route path="/logout" element={<Logout />} />
       <Route path="/send" element={<SendPage />} />
+      <Route path="/mypizza" element={<MyPizza />} />
       <Route path="*" element={<NoPage />} />
       const token = localStorage.getItem('token')
     </Routes>
