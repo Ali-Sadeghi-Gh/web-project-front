@@ -2,52 +2,7 @@ import { useState } from 'react';
 import Pizza from './build';
 import '../../styles/cart.css'
 
-function ShowCart({cart, price}) {
-    const addPizza = async (pizza_id) => {
-        try {
-            const user_token = localStorage.getItem("token");
-            data = {
-                pizza_id: pizza_id
-            }
-            const response = await fetch('http://127.0.0.1:8000/cart/add-pizza-from-cart/', {
-              method: 'POST',
-              body: JSON.stringify(data),
-              headers: {
-                'Content-Type': 'application/json',
-                'Authorization': 'Token ' + user_token,
-              }
-            });
-            const result = await response.json();
-          } 
-          catch (error) {
-            // Handle any error that occurred during the request
-            console.error('Error:', error);
-          }
-    }
-    
-
-    const subPizza = async (pizza_id) => {
-        try {
-            const user_token = localStorage.getItem("token");
-            data = {
-                pizza_id: pizza_id
-            }
-            const response = await fetch('http://127.0.0.1:8000/cart/sub-pizza-from-cart/', {
-              method: 'POST',
-              body: JSON.stringify(data),
-              headers: {
-                'Content-Type': 'application/json',
-                'Authorization': 'Token ' + user_token,
-              }
-            });
-            const result = await response.json();
-          } 
-          catch (error) {
-            // Handle any error that occurred during the request
-            console.error('Error:', error);
-          }
-    }
-    
+function ShowCart({cart, price, onclick_payoff, addPizza, subPizza}) {
     return (
         <div>
         {   
@@ -102,7 +57,7 @@ function ShowCart({cart, price}) {
                 </button>
             </div>
             <div className="cart-right-functions">
-                <button className="cart-functions-button">
+                <button className="cart-functions-button" onClick={onclick_payoff}>
                     Payoff
                 </button>
             </div>

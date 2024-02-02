@@ -8,6 +8,8 @@ import Profile from "../pages/Profile";
 import NoPage from "../pages/NoPage";
 import Login from "../pages/Login";
 import Signup from "../pages/Signup";
+import Logout from "../pages/Logout";
+import SendPage from "../pages/SendPage";
 
 
 const Routers = () => {
@@ -20,6 +22,8 @@ const Routers = () => {
       <Route path="/profile" element={<Profile />} />
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<Signup />} />
+      <Route path="/logout" element={<Logout />} />
+      <Route path="/send" element={<SendPage />} />
       <Route path="*" element={<NoPage />} />
       const token = localStorage.getItem('token')
     </Routes>

@@ -36,6 +36,11 @@ if (isLoggedIn){
     display: "Profile",
     path: "/profile",
   });
+
+  nav__links.push({
+    display: "Logout",
+    path: "/logout",
+  });
 }
 else{
   nav__links.push({
@@ -81,7 +86,6 @@ const Header = () => {
             <img src={logo} alt="logo" />
             <h5>Pizzato</h5>
           </div>
-          {/* ======= menu ======= */}
           <div className="navigation" ref={menuRef} onClick={toggleMenu}>
             <div
               className="menu d-flex align-items-center gap-5"
@@ -107,8 +111,6 @@ const Header = () => {
             </div>
 
           </div>
-
-          {/* ======== nav right icons ========= */}
           
         </div>
       </Container>

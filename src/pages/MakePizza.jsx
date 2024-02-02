@@ -122,8 +122,41 @@ function Pizzas() {
     }
   }
 
-  const addToMyPizzas = () => {
-    //todo
+  const addToMyPizzas = async () => {
+    try {
+      const user_token = localStorage.getItem("token");
+      const pizza_name = localStorage.getItem("pizzaName");
+      const data = {
+        cheese: toppings['cheese'],
+        pepperoni: toppings['pepperoni'],
+        olive: toppings['olive'],
+        corn: toppings['corn'],
+        mushroom: toppings['mushroom'],
+        greenPepper: toppings['greenPepper'],
+        jambon: toppings['jambon'],
+        bacon: toppings['bacon'],
+        sausage: toppings['sausage'],
+        tomato: toppings['tomato'],
+        name: pizza_name
+      }
+      const response = await fetch('http://127.0.0.1:8000/cart/add-to-my-pizza/', {
+        method: 'POST',
+        body: JSON.stringify(data),
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': 'Token ' + user_token,
+        }
+      });
+      console.log('added successfully')
+
+      setPizzaName('')
+      localStorage.removeItem('pizzaName')
+      resetToppings()
+    } 
+    catch (error) {
+      // Handle any error that occurred during the request
+      console.error('Error:', error);
+    }
   }
 
 

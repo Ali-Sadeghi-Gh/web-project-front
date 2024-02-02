@@ -1,0 +1,21 @@
+.sendpage-image-container {
+    width: 50%;
+    height: 350px;
+    margin-bottom: 10%;
+}
+
+.flippable-style{
+    transform: scaleX(-1);
+}
+
+.sendpage-image{
+    margin-left: 75%;
+    width: 50%;
+}
+
+.text-style{
+    margin-left: 80%;
+    font-family: 'Times New Roman', Times, serif;
+
+    margin-top: 1%;
+}

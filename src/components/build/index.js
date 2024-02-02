@@ -6,7 +6,7 @@ import '../../styles/pizza.css'
 
 function Build({toppings, setToppings, resetToppings, addToCart, addToMyPizzas, updatePrice, price, updatePizzaName, pizzaName}) {
   const updateToppings = (name, value) => {
-    let newToppings = JSON.parse(JSON.stringify(toppings)); // deep copy state
+    let newToppings = JSON.parse(JSON.stringify(toppings));
     newToppings[name] = value;
 
     setToppings(newToppings);
