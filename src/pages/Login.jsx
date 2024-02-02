@@ -37,7 +37,7 @@ const Login = (props) => {
                 username: username,
                 password: password,
             };
-            const response = await fetch('http://127.0.0.1:8000/user/login/', {
+            const response = await fetch('${process.env.REACT_APP_API_URI}:${process.env.REACT_APP_API_PORT}/user/login/', {
               method: 'POST',
               body: JSON.stringify(data),
               headers: {

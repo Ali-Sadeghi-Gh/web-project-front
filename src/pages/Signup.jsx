@@ -97,7 +97,7 @@ const Signup = (props) => {
                 phone: phone,
                 address: address,
             };
-            const response = await fetch('http://127.0.0.1:8000/user/register/', {
+            const response = await fetch('${process.env.REACT_APP_API_URI}:${process.env.REACT_APP_API_PORT}/user/register/', {
               method: 'POST',
               body: JSON.stringify(data),
               headers: {

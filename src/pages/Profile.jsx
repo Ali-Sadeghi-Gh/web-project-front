@@ -17,7 +17,7 @@ const Profile = () => {
   const getProfile = async () =>{
   try {
     const user_token = localStorage.getItem("token");
-    const response = await fetch('http://127.0.0.1:8000/user/get-profile/', {
+    const response = await fetch('${process.env.REACT_APP_API_URI}:${process.env.REACT_APP_API_PORT}/user/get-profile/', {
       method: 'POST',
       body: JSON.stringify({}),
       headers: {

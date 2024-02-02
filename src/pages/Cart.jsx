@@ -12,7 +12,7 @@ const Cart = () => {
   const onclick_payoff = async () => {
       try {
         const user_token = localStorage.getItem("token");
-        const response = await fetch('http://127.0.0.1:8000/order/order/', {
+        const response = await fetch('${process.env.REACT_APP_API_URI}:${process.env.REACT_APP_API_PORT}/order/order/', {
           method: 'POST',
           body: JSON.stringify({}),
           headers: {
@@ -34,7 +34,7 @@ const Cart = () => {
           const data = {
               pizza_id: pizza_id
           }
-          const response = await fetch('http://127.0.0.1:8000/cart/add-pizza-from-cart/', {
+          const response = await fetch('${process.env.REACT_APP_API_URI}:${process.env.REACT_APP_API_PORT}/cart/add-pizza-from-cart/', {
             method: 'POST',
             body: JSON.stringify(data),
             headers: {
@@ -57,7 +57,7 @@ const Cart = () => {
           const data = {
               pizza_id: pizza_id
           }
-          const response = await fetch('http://127.0.0.1:8000/cart/sub-pizza-from-cart/', {
+          const response = await fetch('${process.env.REACT_APP_API_URI}:${process.env.REACT_APP_API_PORT}/cart/sub-pizza-from-cart/', {
             method: 'POST',
             body: JSON.stringify(data),
             headers: {
@@ -77,7 +77,7 @@ const Cart = () => {
   const getActiveCart = async () => {
     try {
       const user_token = localStorage.getItem("token");
-      const response = await fetch('http://127.0.0.1:8000/cart/get-active-cart/', {
+      const response = await fetch('${process.env.REACT_APP_API_URI}:${process.env.REACT_APP_API_PORT}/cart/get-active-cart/', {
         method: 'POST',
         body: JSON.stringify({}),
         headers: {
