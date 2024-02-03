@@ -107,6 +107,7 @@ const Signup = (props) => {
                 setUsernameError("Duplicate username")
                 return
             }
+            window.location.reload(false);
         } 
         catch (error) {
             console.error('Error:', error);

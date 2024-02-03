@@ -20,6 +20,7 @@ const Logout =  () =>{
             const result = await response.json();
             localStorage.clear('token')
             navigate('/home');
+            window.location.reload(false);
         } 
         catch (error) {
             console.error('Error:', error);
