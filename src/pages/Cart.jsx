@@ -12,7 +12,9 @@ const Cart = () => {
   const onclick_payoff = async () => {
       try {
         const user_token = localStorage.getItem("token");
-        const response = await fetch('${process.env.REACT_APP_API_URI}:${process.env.REACT_APP_API_PORT}/order/order/', {
+        const main_url = process.env.REACT_APP_API_URI + ':' + process.env.REACT_APP_API_PORT
+        const url = main_url + '/order/order/'
+        const response = await fetch(url, {
           method: 'POST',
           body: JSON.stringify({}),
           headers: {
@@ -34,7 +36,9 @@ const Cart = () => {
           const data = {
               pizza_id: pizza_id
           }
-          const response = await fetch('${process.env.REACT_APP_API_URI}:${process.env.REACT_APP_API_PORT}/cart/add-exits-pizza-to-cart/', {
+          const main_url = process.env.REACT_APP_API_URI + ':' + process.env.REACT_APP_API_PORT
+          const url = main_url + '/cart/add-exits-pizza-to-cart/'
+          const response = await fetch(url, {
             method: 'POST',
             body: JSON.stringify(data),
             headers: {
@@ -57,7 +61,10 @@ const Cart = () => {
           const data = {
               pizza_id: pizza_id
           }
-          const response = await fetch('${process.env.REACT_APP_API_URI}:${process.env.REACT_APP_API_PORT}/cart/add-exits-pizza-to-cart/', {
+
+          const main_url = process.env.REACT_APP_API_URI + ':' + process.env.REACT_APP_API_PORT
+          const url = main_url + '/cart/add-exits-pizza-to-cart/'
+          const response = await fetch(url, {
             method: 'POST',
             body: JSON.stringify(data),
             headers: {
@@ -77,7 +84,9 @@ const Cart = () => {
   const getActiveCart = async () => {
     try {
       const user_token = localStorage.getItem("token");
-      const response = await fetch('${process.env.REACT_APP_API_URI}:${process.env.REACT_APP_API_PORT}/cart/get-active-cart/', {
+      const main_url = process.env.REACT_APP_API_URI + ':' + process.env.REACT_APP_API_PORT
+      const url = main_url + '/cart/get-active-cart/'
+      const response = await fetch(url, {
         method: 'POST',
         body: JSON.stringify({}),
         headers: {
@@ -99,8 +108,7 @@ const Cart = () => {
 
   useEffect(() => {
     const token = localStorage.getItem("token");
-    if (token)
-      getActiveCart();
+    if (token) getActiveCart();
   }, []);
 
   return (

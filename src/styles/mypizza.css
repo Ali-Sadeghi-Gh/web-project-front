@@ -1,19 +1,17 @@
-  
+/*   
+
 .overlay-mypizza {
-    position: absolute;
+    position: relative;
     width: 70%;
     margin-left: 15%;
     height: 100px;
-    top: 0;
-    left: 0;
-    opacity: 0;
     transition: .5s ease;
-    background-color: rgb(136, 45, 18);
-    border: 5px solid #9c2424;
 }
 
 .pizza-box {
-    border: 5px solid #9c2424;
+    padding: 5%;
+    border-radius: 10%;
+    border-style: double;
     width: 70%;
     margin-left: 15%;
 }
@@ -24,6 +22,97 @@
   
 .text-mypizza {
     color: black;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+  
+
+.mypizza-container {
+    width: 100%;
+}  
+.mypizza {
+    margin-left: 25%;
+    width: 50%;
+    position: relative;
+}
+  
+.mypizza-topping {
+    position: absolute;
+    margin-top: -100px;
+}
+  
+.mypizza-topping-img {
+    width: 100%;
+} */
+
+
+.text-mypizza {
+    color: black;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.mypizza-container {
+    width: 100%;
+}  
+.mypizza {
+    margin-left: 25%;
+    width: 50%;
+    position: relative;
+}
+  
+.mypizza-topping {
+    position: absolute;
+    margin-top: -100px;
+}
+  
+.mypizza-topping-img {
+    width: 100%;
+}
+
+
+.container-pizza {
+    position: relative;
+    width: 100%;
+}
+  
+.image-pizza {
+    display: block;
+    width: 100%px;
+    height: auto;
+}
+  
+.overlay-pizza {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: auto;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #212245;
+}
+
+.container-pizza:hover .overlay-pizza {
+    opacity: 0.5;
+}
+  
+.text-pizza {
+    color: white;
     font-size: 20px;
     position: absolute;
     top: 50%;
@@ -46,20 +135,11 @@
 } 
 
 
-.mypizza-container {
-    width: 100%;
-}  
-.mypizza {
-    margin-left: 25%;
-    width: 50%;
-    position: relative;
-}
-  
-.mypizza-topping {
-    position: absolute;
-    margin-top: -100px;
-}
-  
-.mypizza-topping-img {
-    width: 100%;
+.box-pizza {
+    padding: 10px 10px 10px 10px;
+
+    border: 5px solid #9c2424;
+    border-radius: 16px;
+    border-style: double;
+    width: 300px;
 }

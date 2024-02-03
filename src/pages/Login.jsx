@@ -37,7 +37,9 @@ const Login = (props) => {
                 username: username,
                 password: password,
             };
-            const response = await fetch('${process.env.REACT_APP_API_URI}:${process.env.REACT_APP_API_PORT}/user/login/', {
+            const main_url = process.env.REACT_APP_API_URI + ':' + process.env.REACT_APP_API_PORT
+            const url = main_url + '/user/login/'
+            const response = await fetch(url, {
               method: 'POST',
               body: JSON.stringify(data),
               headers: {
@@ -48,7 +50,6 @@ const Login = (props) => {
             const token = result["token"]
             alert("You login successfully")
             localStorage.setItem("token", token);
-
             navigate('/home');
 
         } 

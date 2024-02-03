@@ -7,38 +7,20 @@ import '../styles/mypizza.css'
 
 
 const MyPizza = () => {
-  const [mypizzas, setMyPizzas] = useState({'mypizza': [{name: 'my', id:1, cheese:2, pepperoni:2 ,price:3},{name: 'my', id:1, cheese:2, pepperoni:2 ,price:3},{name: 'my', id:1, cheese:2, pepperoni:2 ,price:3},{name: 'my', id:1, cheese:2, pepperoni:2 ,price:3},{name: 'my', id:1, cheese:2, pepperoni:2 ,price:3},{name: 'my', id:1, cheese:2, pepperoni:2 ,price:3}]})  
+  // const [mypizzas, setMyPizzas] = useState({'mypizza': [{name: 'my', pizza_id:1, cheese:2, pepperoni:2 ,price:3},{name: 'my', pizza_id:1, cheese:2, pepperoni:2 ,price:3},{name: 'my', pizza_id:1, cheese:2, pepperoni:2 ,price:3},{name: 'my', pizza_id:1, cheese:2, pepperoni:2 ,price:3},{name: 'my', pizza_id:1, cheese:2, pepperoni:2 ,price:3},{name: 'my', pizza_id:1, cheese:2, pepperoni:2 ,price:3}]})  
+  const [mypizzas, setMyPizzas] = useState({'mypizza': []})  
 
-  // const add_pizza_to_my_pizza = async (pizza_id) => {
-  //     try {
-  //       const user_token = localStorage.getItem("token");
-  //       const data = {
-  //           pizza_id: pizza_id
-  //       }
-  //       const response = await fetch('${process.env.REACT_APP_API_URI}:${process.env.REACT_APP_API_PORT}/myPizza/add-pizza-to-my-pizza/', {//todo
-  //         method: 'POST',
-  //         body: JSON.stringify(data),
-  //         headers: {
-  //           'Content-Type': 'application/json',
-  //           'Authorization': 'Token ' + user_token,
-  //         }
-  //       });
-  //       const result = await response.json();
-  //       get_my_pizzas()
-  //     } 
-  //     catch (error) {
-  //       // Handle any error that occurred during the request
-  //       console.error('Error:', error);
-  //     }
-  // }
 
   const add_my_pizza_to_cart = async (pizza_id) => {
+    console.log(pizza_id)
     try {
       const user_token = localStorage.getItem("token");
       const data = {
           pizza_id: pizza_id
       }
-      const response = await fetch('${process.env.REACT_APP_API_URI}:${process.env.REACT_APP_API_PORT}/myPizza/add-my-pizza-to-cart/', {//todo
+      const main_url = process.env.REACT_APP_API_URI + ':' + process.env.REACT_APP_API_PORT
+      const url = main_url + '/cart/add-my-pizza-to-cart/'
+      const response = await fetch(url, {//todo
         method: 'POST',
         body: JSON.stringify(data),
         headers: {
@@ -47,7 +29,7 @@ const MyPizza = () => {
         }
       });
       const result = await response.json();
-      get_my_pizzas()
+
     } 
     catch (error) {
       // Handle any error that occurred during the request
@@ -56,33 +38,12 @@ const MyPizza = () => {
 }
 
 
-  const delete_pizza_from_my_pizza = async (pizza_id) => {
-      try {
-        const user_token = localStorage.getItem("token");
-        const data = {
-            pizza_id: pizza_id
-        }
-        const response = await fetch('${process.env.REACT_APP_API_URI}:${process.env.REACT_APP_API_PORT}/cart/delete-pizza-from-my-pizza/', {//todo
-          method: 'POST',
-          body: JSON.stringify(data),
-          headers: {
-            'Content-Type': 'application/json',
-            'Authorization': 'Token ' + user_token,
-          }
-        });
-        const result = await response.json();
-        get_my_pizzas()
-        } 
-        catch (error) {
-          console.error('Error:', error);
-        }
-  }
-
-
   const get_my_pizzas = async () => {
         try {
           const user_token = localStorage.getItem("token");
-          const response = await fetch('${process.env.REACT_APP_API_URI}:${process.env.REACT_APP_API_PORT}/cart/get-my-pizzas/', {//todo
+          const main_url = process.env.REACT_APP_API_URI + ':' + process.env.REACT_APP_API_PORT
+          const url = main_url + '/cart/get-my-pizzas/'
+          const response = await fetch(url, {//todo
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -90,6 +51,7 @@ const MyPizza = () => {
           }
         });
         const result = await response.json();
+        console.log(result)
         setMyPizzas(result);//todo
         } 
         catch (error) {
@@ -115,17 +77,18 @@ const MyPizza = () => {
 
 
   return (
-    <>
+    <div style={{}}>
       {handle_rows(mypizzas).map((row)=>(
         <div className='row'>
           {row.map((pizza)=>(
             <ShowMyPizza
               mypizza={pizza}
-            />  
+              add_my_pizza_to_cart={add_my_pizza_to_cart}
+            />
           ))}
         </div>
       ))}
-    </>
+    </div>
   );
 };
 

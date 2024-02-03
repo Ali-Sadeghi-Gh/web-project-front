@@ -60,7 +60,9 @@ function Pizzas() {
 
   const updatePrice = async (newToppings) => {
     try {
-      const response = await fetch('${process.env.REACT_APP_API_URI}:${process.env.REACT_APP_API_PORT}/shop/calculate-price/', {
+      const main_url = process.env.REACT_APP_API_URI + ':' + process.env.REACT_APP_API_PORT
+      const url = main_url + '/shop/calculate-price/'
+      const response = await fetch(url, {
         method: 'POST',
         body: JSON.stringify(newToppings),
         headers: {
@@ -102,7 +104,9 @@ function Pizzas() {
         tomato: toppings['tomato'],
         name: pizza_name
       }
-      const response = await fetch('${process.env.REACT_APP_API_URI}:${process.env.REACT_APP_API_PORT}/cart/add-pizza-to-cart/', {
+      const main_url = process.env.REACT_APP_API_URI + ':' + process.env.REACT_APP_API_PORT
+      const url = main_url + '/cart/add-pizza-to-cart/'
+      const response = await fetch(url, {
         method: 'POST',
         body: JSON.stringify(data),
         headers: {
@@ -139,7 +143,9 @@ function Pizzas() {
         tomato: toppings['tomato'],
         name: pizza_name
       }
-      const response = await fetch('${process.env.REACT_APP_API_URI}:${process.env.REACT_APP_API_PORT}/cart/add-to-my-pizza/', {
+      const main_url = process.env.REACT_APP_API_URI + ':' + process.env.REACT_APP_API_PORT
+      const url = main_url + '/cart/add-to-my-pizza/'
+      const response = await fetch(url, {
         method: 'POST',
         body: JSON.stringify(data),
         headers: {

@@ -202,28 +202,28 @@ function Pizza({toppings}) {
           </>
           <> {/* greenPapper */}
             <motion.div
-              animate={{y: 100, opacity: (toppings["green pepper"] == 1) ? 1 : 0}}
+              animate={{y: 100, opacity: (toppings["greenPepper"] == 1) ? 1 : 0}}
               transition={{ duration: 0 }}
               className="pizza-topping"
             >
             <img src={GreenPepper1} alt="img" className="pizza-topping-img" />
             </motion.div>
               <motion.div
-                animate={{y: 100, opacity: (toppings["green pepper"] == 2) ? 1 : 0}}
+                animate={{y: 100, opacity: (toppings["greenPepper"] == 2) ? 1 : 0}}
                 transition={{ duration: 0 }}
                 className="pizza-topping"
               >
               <img src={GreenPepper2} alt="img" className="pizza-topping-img" />
             </motion.div>
               <motion.div
-                animate={{y: 100, opacity: (toppings["green pepper"] == 3) ? 1 : 0}}
+                animate={{y: 100, opacity: (toppings["greenPepper"] == 3) ? 1 : 0}}
                 transition={{ duration: 0 }}
                 className="pizza-topping"
               >
               <img src={GreenPepper3} alt="img" className="pizza-topping-img" />
             </motion.div>
               <motion.div
-                animate={{y: 100, opacity: (toppings["green pepper"] == 4) ? 1 : 0}}
+                animate={{y: 100, opacity: (toppings["greenPepper"] == 4) ? 1 : 0}}
                 transition={{ duration: 0 }}
                 className="pizza-topping"
               >

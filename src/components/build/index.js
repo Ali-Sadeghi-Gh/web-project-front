@@ -27,7 +27,7 @@ function Build({toppings, setToppings, resetToppings, addToCart, addToMyPizzas, 
         <ToppingList toppings={toppings} updateToppings={updateToppings} isLeft={false}/>
       </div>      
       <div>
-        <input placeholder={pizzaName} style={{borderRadius: '16px', textAlign: 'center',width: '15%',marginLeft: '42.5%'}} onChange={ev => updatePizzaName(ev.target.value)}>
+        <input placeholder={pizzaName} style={{borderRadius: '16px', textAlign: 'center',width: '15%',marginLeft: '42.5%', marginTop: '5%'}} onChange={ev => updatePizzaName(ev.target.value)}>
         </input>
        </div>
        <br/>

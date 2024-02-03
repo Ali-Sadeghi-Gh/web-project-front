@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Helmet from "../components/Helmet/Helmet.js";
 import { Container, Row, Col } from "reactstrap";
 
@@ -9,6 +9,7 @@ import "../styles/hero-section.css";
 
 const Home = () => {
   const token = localStorage.getItem("token");
+  
   var isLoggedIn = true;
   if(token == null){
     isLoggedIn = false;

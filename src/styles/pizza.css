@@ -1,250 +1,249 @@
 /* Global */
 
 * {
-    box-sizing: border-box;
-  }
-
-  
-  button {
-    background-color: #df2020;
-    border: none;
-    color: white;
-    padding: 1%;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    border-radius: 1rem;
-    font-size: 1.15rem;
-    margin: 1%;
-    text-align:center;
-    transition: all 0.2s;
-  }
-  
-  button:hover {
-    background-color: #212245;
-  }
-  
-  /* Header Component */
-
-  
-  /* Build Component */
-  
-  .pizza-container {
-    width: 50%;
-    margin-left: 25%;
-    padding: 10px;
-  }
-  
-  .pizza {
-    margin: auto;
-    width: auto;
-    position: relative;
-  }
-  
-  .pizza-topping {
-    position: absolute;
-    margin-top: -100px;
-  }
-  
-  .pizza-topping-img {
-    width: 100%;
-  }
-  
-  .list-container {
-    margin: auto;
-    width: 40vw;
-    min-width: 375px;
-  }
-  
-  .list {
-    display: flex;
-    flex-wrap: wrap;
-    margin: auto;
-    margin-top: 1%;
-    margin-bottom: 2.5%;
-    width: 50%;
-  }
-  
-  .list-description {
-    margin-top: 1%;
-    font-size: 1.1rem;
-    text-align: center;
-    font-style: italic;
-  }
-  
-  .list-item-left {
-    border-radius: 16px;
-    display: block;
-    flex-wrap: flex;
-    margin-left: 0%;
-    /* margin: auto;
-    margin-top: 1%;
-    margin-bottom: 1%;
-    width: 45%;
-    padding: 0.5%; */
-  }
-
-  .list-item-right {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 300px; /* Adjust the width as needed */
-    margin-bottom: 20px; /* Add bottom margin for spacing */
-    flex: 1;
-    display: flex;
-    gap: 10px; /* Add space between buttons */
-    /* margin-left: 80%; */
-    /* margin: auto;
-    margin-top: 1%;
-    margin-bottom: 1%;
-    width: 45%;
-    padding: 0.5%; */
-  }
+  box-sizing: border-box;
+}
 
 
-  .selected{
-    background-color: green;
-  }
-  
-  .left-functions{
-    width: 50%;
-    float: left;
-  }
+button {
+  background-color: #df2020;
+  border: none;
+  color: white;
+  padding: 1%;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 1rem;
+  font-size: 1.15rem;
+  margin: 1%;
+  text-align:center;
+  transition: all 0.2s;
+}
 
-  .right-functions{
-    width: 50%;
-    float: right;
-  }
+button:hover {
+  background-color: #212245;
+}
 
-  
-  .functions {
-    margin: auto;
-    width: 100%;
-    padding: 0.1rem;;
-    display: flex;
-  }
+/* Header Component */
 
-  
-  .functions-button {
-    border-radius: 100px;
-    flex: 1;
-    margin-top: 2%;
-    width: 80%;
-    margin-bottom: 5%;
-    margin-left: 10%;
-    padding: 2.5%;
-    background: #df2020;
-    border: 2px solid #df2020;
-  }
 
-  .functions-price {
-    border-radius: 100px;
-    flex: 1;
-    margin-top: 2%;
-    width: 80%;
-    margin-bottom: 5%;
-    margin-left: 10%;
-    padding: 2.5%;
-    background: white;
-    font-weight: bold;
-    color: #df2020;
-    border: 2px solid #df2020;
-    cursor: default;
-  }
+/* Build Component */
 
-  .functions-price:hover {
-    cursor: default;  
-    background-color: white;
-  }
-  
+.pizza-container {
+  width: 50%;
+  margin-left: 25%;
+  padding: 10px;
+}
+
+.pizza {
+  margin: auto;
+  width: auto;
+  position: relative;
+}
+
+.pizza-topping {
+  position: absolute;
+  margin-top: -100px;
+}
+
+.pizza-topping-img {
+  width: 100%;
+}
+
+.list-container {
+  margin: auto;
+  width: 40vw;
+  min-width: 375px;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  margin-top: 1%;
+  margin-bottom: 2.5%;
+  width: 50%;
+}
+
+.list-description {
+  margin-top: 1%;
+  font-size: 1.1rem;
+  text-align: center;
+  font-style: italic;
+}
+
+.list-item-left {
+  border-radius: 16px;
+  display: block;
+  flex-wrap: flex;
+  margin-left: 0%;
+  /* margin: auto;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  width: 45%;
+  padding: 0.5%; */
+}
+
+.list-item-right {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 300px; /* Adjust the width as needed */
+  margin-bottom: 20px; /* Add bottom margin for spacing */
+  flex: 1;
+  display: flex;
+  gap: 10px; /* Add space between buttons */
+  /* margin-left: 80%; */
+  /* margin: auto;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  width: 45%;
+  padding: 0.5%; */
+}
+
+
+.selected{
+  background-color: green;
+}
+
+.left-functions{
+  width: 50%;
+  float: left;
+}
+
+.right-functions{
+  width: 50%;
+  float: right;
+}
+
+
+.functions {
+  margin: auto;
+  width: 100%;
+  padding: 0.1rem;;
+  display: flex;
+}
+
+
+.functions-button {
+  border-radius: 100px;
+  flex: 1;
+  margin-top: 2%;
+  width: 80%;
+  margin-bottom: 5%;
+  margin-left: 10%;
+  padding: 2.5%;
+  background: #df2020;
+  border: 2px solid #df2020;
+}
+
+.functions-price {
+  border-radius: 100px;
+  flex: 1;
+  margin-top: 2%;
+  width: 80%;
+  margin-bottom: 5%;
+  margin-left: 10%;
+  padding: 2.5%;
+  background: white;
+  font-weight: bold;
+  color: #df2020;
+  border: 2px solid #df2020;
+  cursor: default;
+}
+
+.functions-price:hover {
+  cursor: default;  
+  background-color: white;
+}
+
 
 
 .leftdiv {
-    float: left;
-    margin-left: 2%;
-    width: 25%;
-    height: 350px;
+  float: left;
+  margin-left: 2%;
+  width: 25%;
+  height: 350px;
 }
 
 .middlediv {
-    float: left;
-    width: 46%;
-    height: 350px;
+  float: left;
+  width: 46%;
+  height: 350px;
 }
 
 .rightdiv {
-    float: right;
-    width: 25%;
-    margin-right: 2%;
-    height: 350px;
+  float: right;
+  width: 25%;
+  margin-right: 2%;
+  height: 350px;
 }
 
 
-  
-  /* Responsive */
-  @media screen and (max-width: 1024px) {
-    .pizza-container {
-      width: 70%;
-      margin-left: 15%;
-      padding: 10px;
-    }
 
-    button {
-      font-size: 1.1rem;
-    }
-  
-    .list-container {
-      width: 50vw;
-    }
-  
-    .functions-container {
-      width: 51vw;
-    }
-  
-    .list {
-      width: 60%;
-    }
-    
-    .functions {
-      width: 60%;
-    }
+/* Responsive */
+@media screen and (max-width: 1024px) {
+  .pizza-container {
+    width: 70%;
+    margin-left: 15%;
+    padding: 10px;
+  }
+
+  button {
+    font-size: 1.1rem;
+  }
+
+  .list-container {
+    width: 50vw;
+  }
+
+  .functions-container {
+    width: 51vw;
+  }
+
+  .list {
+    width: 60%;
   }
   
-  @media screen and (max-width: 860px) {
-  
-    .list-container {
-      width: 65vw;
-    }
-  
-    .functions-container {
-      width: 66vw;
-    }
-  
-    .list {
-      width: 70%;
-    }
-    
-    .functions {
-      width: 70%;
-    }
+  .functions {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 860px) {
+
+  .list-container {
+    width: 65vw;
+  }
+
+  .functions-container {
+    width: 66vw;
+  }
+
+  .list {
+    width: 70%;
   }
   
-  @media screen and (max-width: 400px) {
-  
-    .list-container {
-      width: 75vw;
-    }
-  
-    .functions-container {
-      width: 76vw;
-    }
-  
-    .list {
-      width: 70%;
-    }
-    
-    .functions {
-      width: 90%;
-    }
+  .functions {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+
+  .list-container {
+    width: 75vw;
+  }
+
+  .functions-container {
+    width: 76vw;
+  }
+
+  .list {
+    width: 70%;
   }
   
+  .functions {
+    width: 90%;
+  }
+}

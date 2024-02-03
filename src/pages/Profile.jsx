@@ -17,7 +17,9 @@ const Profile = () => {
   const getProfile = async () =>{
   try {
     const user_token = localStorage.getItem("token");
-    const response = await fetch('${process.env.REACT_APP_API_URI}:${process.env.REACT_APP_API_PORT}/user/get-profile/', {
+    const main_url = process.env.REACT_APP_API_URI + ':' + process.env.REACT_APP_API_PORT
+    const url = main_url + '/user/get-profile/'
+    const response = await fetch(url, {
       method: 'POST',
       body: JSON.stringify({}),
       headers: {

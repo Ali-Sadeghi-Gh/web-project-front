@@ -97,7 +97,9 @@ const Signup = (props) => {
                 phone: phone,
                 address: address,
             };
-            const response = await fetch('${process.env.REACT_APP_API_URI}:${process.env.REACT_APP_API_PORT}/user/register/', {
+            const main_url = process.env.REACT_APP_API_URI + ':' + process.env.REACT_APP_API_PORT
+            const url = main_url + '/user/register/'
+            const response = await fetch(url, {
               method: 'POST',
               body: JSON.stringify(data),
               headers: {
@@ -109,7 +111,6 @@ const Signup = (props) => {
             alert("You signed up successfully")
             console.log(token)
             localStorage.setItem("token", token);
-
             navigate('/home');
 
         } 
