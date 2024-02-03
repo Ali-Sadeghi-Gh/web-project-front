@@ -5,15 +5,19 @@ import '../../styles/mypizza.css'
 function ShowMyPizza({mypizza}) {
     return (
         <div className="column">
-            <Pizza
-                toppings={mypizza}
-            />    
-            <div style={{textAlign: 'center', fontFamily: 'Times New Roman, Times, serif', }}>
-                {mypizza['name']}
+            <div className="pizza-box">
+                <Pizza
+                    toppings={mypizza}
+                />    
+                <div style={{textAlign: 'center', fontFamily: 'Times New Roman, Times, serif', fontSize: 20, }}>
+                    name: {mypizza['name']}
+                    <br/>
+                    price: {mypizza['price']}
+                </div>
             </div>
-            {/* <div class="overlay_gallery">
-                <div class="text_gallery">coffee shop</div>
-            </div> */}
+            <div className="overlay-mypizza">
+                <div className="text-mypizza">coffee shop</div>
+            </div>
         </div>
   );
 };

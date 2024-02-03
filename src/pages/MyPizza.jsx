@@ -7,7 +7,7 @@ import '../styles/mypizza.css'
 
 
 const MyPizza = () => {
-  const [mypizzas, setMyPizzas] = useState([])  
+  const [mypizzas, setMyPizzas] = useState({'mypizza': [{name: 'my', id:1, cheese:2, pepperoni:2 ,price:3},{name: 'my', id:1, cheese:2, pepperoni:2 ,price:3},{name: 'my', id:1, cheese:2, pepperoni:2 ,price:3},{name: 'my', id:1, cheese:2, pepperoni:2 ,price:3},{name: 'my', id:1, cheese:2, pepperoni:2 ,price:3},{name: 'my', id:1, cheese:2, pepperoni:2 ,price:3}]})  
 
   const add_pizza_to_my_pizza = async (pizza_id) => {
       try {
@@ -81,11 +81,11 @@ const MyPizza = () => {
 
   const handle_rows = (mypizzas) => {
     const rows = []
-    for(var i=0; i < mypizzas.length; i++) {
+    for(var i=0; i < mypizzas['mypizza'].length; i++) {
       if (i % 4 == 0) {
         rows.push([])
       }
-      rows[Math.floor(i/4)].push(mypizzas[i])
+      rows[Math.floor(i/4)].push(mypizzas['mypizza'][i])
     }
     return rows
   }

@@ -1,27 +1,29 @@
-/* .container-gallery {
-    position: relative;
-    width: 300px;
-}
   
-.overlay-gallery {
+.overlay-mypizza {
     position: absolute;
+    width: 70%;
+    margin-left: 15%;
+    height: 100px;
     top: 0;
-    bottom: 0;
     left: 0;
-    right: 0;
-    height: auto;
-    width: 300px;
     opacity: 0;
     transition: .5s ease;
-    background-color: rgb(136, 45, 18)
+    background-color: rgb(136, 45, 18);
+    border: 5px solid #9c2424;
 }
 
-.container-gallery:hover .overlay-gallery {
+.pizza-box {
+    border: 5px solid #9c2424;
+    width: 70%;
+    margin-left: 15%;
+}
+
+.pizza-box:hover .overlay-mypizza {
     opacity: 0.5;
 }
   
-.text-gallery {
-    color: white;
+.text-mypizza {
+    color: black;
     font-size: 20px;
     position: absolute;
     top: 50%;
@@ -30,17 +32,10 @@
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     text-align: center;
-} */
-
-/* .box-gallery {
-    padding: 10px 10px 10px 10px;
-
-    border: 5px solid #9c2424;
-    width: 300px;
-} */
+}
   
 .row {
-    padding-left: 5%;
+    padding-left: 4%;
     padding-top: 20px;
     padding-bottom: 20px;
     display: flex;
