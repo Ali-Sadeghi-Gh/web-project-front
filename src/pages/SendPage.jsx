@@ -18,17 +18,13 @@ const SendPage = () => {
             <img src={ImageUrl} alt="loading..." className="sendpage-image flippable-style" />)
   };
 
-
-  
-
-
   return (
     <div>
         <div className="sendpage-image-container" onClick={handleImageClick}>
               {image_block}
         </div>
         <div className="text-style">
-                Will send soon...
+                Thanks for your choice. Will send it soon...
         </div>
     </div>
     

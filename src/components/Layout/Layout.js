@@ -4,8 +4,6 @@ import Header from "../Header/Header.jsx";
 import Footer from "../Footer/Footer.jsx";
 import Routes from "../../routes/Routers";
 
-import { useSelector } from "react-redux";
-
 const Layout = () => {
 
   return (
