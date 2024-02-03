@@ -9,28 +9,51 @@ import '../styles/mypizza.css'
 const MyPizza = () => {
   const [mypizzas, setMyPizzas] = useState({'mypizza': [{name: 'my', id:1, cheese:2, pepperoni:2 ,price:3},{name: 'my', id:1, cheese:2, pepperoni:2 ,price:3},{name: 'my', id:1, cheese:2, pepperoni:2 ,price:3},{name: 'my', id:1, cheese:2, pepperoni:2 ,price:3},{name: 'my', id:1, cheese:2, pepperoni:2 ,price:3},{name: 'my', id:1, cheese:2, pepperoni:2 ,price:3}]})  
 
-  const add_pizza_to_my_pizza = async (pizza_id) => {
-      try {
-        const user_token = localStorage.getItem("token");
-        const data = {
-            pizza_id: pizza_id
-        }
-        const response = await fetch('${process.env.REACT_APP_API_URI}:${process.env.REACT_APP_API_PORT}/myPizza/add-pizza-to-my_pizza/', {//todo
-          method: 'POST',
-          body: JSON.stringify(data),
-          headers: {
-            'Content-Type': 'application/json',
-            'Authorization': 'Token ' + user_token,
-          }
-        });
-        const result = await response.json();
-        get_my_pizzas()
-      } 
-      catch (error) {
-        // Handle any error that occurred during the request
-        console.error('Error:', error);
+  // const add_pizza_to_my_pizza = async (pizza_id) => {
+  //     try {
+  //       const user_token = localStorage.getItem("token");
+  //       const data = {
+  //           pizza_id: pizza_id
+  //       }
+  //       const response = await fetch('${process.env.REACT_APP_API_URI}:${process.env.REACT_APP_API_PORT}/myPizza/add-pizza-to-my-pizza/', {//todo
+  //         method: 'POST',
+  //         body: JSON.stringify(data),
+  //         headers: {
+  //           'Content-Type': 'application/json',
+  //           'Authorization': 'Token ' + user_token,
+  //         }
+  //       });
+  //       const result = await response.json();
+  //       get_my_pizzas()
+  //     } 
+  //     catch (error) {
+  //       // Handle any error that occurred during the request
+  //       console.error('Error:', error);
+  //     }
+  // }
+
+  const add_my_pizza_to_cart = async (pizza_id) => {
+    try {
+      const user_token = localStorage.getItem("token");
+      const data = {
+          pizza_id: pizza_id
       }
-  }
+      const response = await fetch('${process.env.REACT_APP_API_URI}:${process.env.REACT_APP_API_PORT}/myPizza/add-my-pizza-to-cart/', {//todo
+        method: 'POST',
+        body: JSON.stringify(data),
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': 'Token ' + user_token,
+        }
+      });
+      const result = await response.json();
+      get_my_pizzas()
+    } 
+    catch (error) {
+      // Handle any error that occurred during the request
+      console.error('Error:', error);
+    }
+}
 
 
   const delete_pizza_from_my_pizza = async (pizza_id) => {
@@ -39,7 +62,7 @@ const MyPizza = () => {
         const data = {
             pizza_id: pizza_id
         }
-        const response = await fetch('${process.env.REACT_APP_API_URI}:${process.env.REACT_APP_API_PORT}/myPizza/delete_pizza_from_my_pizza/', {//todo
+        const response = await fetch('${process.env.REACT_APP_API_URI}:${process.env.REACT_APP_API_PORT}/cart/delete-pizza-from-my-pizza/', {//todo
           method: 'POST',
           body: JSON.stringify(data),
           headers: {
@@ -59,7 +82,7 @@ const MyPizza = () => {
   const get_my_pizzas = async () => {
         try {
           const user_token = localStorage.getItem("token");
-          const response = await fetch('${process.env.REACT_APP_API_URI}:${process.env.REACT_APP_API_PORT}/myPizza/get_my_pizzas/', {//todo
+          const response = await fetch('${process.env.REACT_APP_API_URI}:${process.env.REACT_APP_API_PORT}/cart/get-my-pizzas/', {//todo
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
