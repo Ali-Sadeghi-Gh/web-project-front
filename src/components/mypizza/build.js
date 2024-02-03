@@ -41,129 +41,129 @@ import Tomato2 from "../../assets/images/Tomato_2.png";
 import Tomato3 from "../../assets/images/Tomato_3.png";
 import Tomato4 from "../../assets/images/Tomato_4.png";
 import {motion} from "framer-motion";
-import '../../styles/cart.css'
+import '../../styles/mypizza.css'
 
 function Pizza({toppings}) {
   return (
-    <div className="cart-pizza-container">
-        <div className="cart-pizza" >
+    <div className="mypizza-container">
+        <div className="mypizza" >
           <> {/* cheese */}
             <motion.div
               animate={{ y: 100, opacity: (toppings["cheese"] == 1) ? 1 : 0}}
               transition={{ duration: 0 }}
-              className="cart-pizza-topping"
+              className="mypizza-topping"
             >
-              <img src={Cheese1} alt="img" className="cart-pizza-topping-img" />
+              <img src={Cheese1} alt="img" className="mypizza-topping-img" />
             </motion.div>
             <motion.div
               animate={{ y: 100, opacity: (toppings["cheese"] == 2) ? 1 : 0}}
               transition={{ duration: 0 }}
-              className="cart-pizza-topping"
+              className="mypizza-topping"
             >
-              <img src={Cheese2} alt="img" className="cart-pizza-topping-img" />
+              <img src={Cheese2} alt="img" className="mypizza-topping-img" />
             </motion.div>
             <motion.div
               animate={{ y: 100, opacity: (toppings["cheese"] == 3) ? 1 : 0}}
               transition={{ duration: 0 }}
-              className="cart-pizza-topping"
+              className="mypizza-topping"
             >
-              <img src={Cheese3} alt="img" className="cart-pizza-topping-img" />
+              <img src={Cheese3} alt="img" className="mypizza-topping-img" />
             </motion.div>
             <motion.div
               animate={{ y: 100, opacity: (toppings["cheese"] == 4) ? 1 : 0}}
               transition={{ duration: 0 }}
-              className="cart-pizza-topping"
+              className="mypizza-topping"
             >
-              <img src={Cheese4} alt="img" className="cart-pizza-topping-img" />
+              <img src={Cheese4} alt="img" className="mypizza-topping-img" />
             </motion.div>
           </>
           <> {/* pepperoni */}
             <motion.div
               animate={{ y: 100, opacity: (toppings["pepperoni"] == 1) ? 1 : 0}}
               transition={{ duration: 0 }}
-              className="cart-pizza-topping"
+              className="mypizza-topping"
             >
-              <img src={Pepperoni1} alt="img" className="cart-pizza-topping-img" />
+              <img src={Pepperoni1} alt="img" className="mypizza-topping-img" />
             </motion.div>
             <motion.div
               animate={{ y: 100, opacity: (toppings["pepperoni"] == 2) ? 1 : 0}}
               transition={{ duration: 0 }}
-              className="cart-pizza-topping"
+              className="mypizza-topping"
             >
-              <img src={Pepperoni2} alt="img" className="cart-pizza-topping-img" />
+              <img src={Pepperoni2} alt="img" className="mypizza-topping-img" />
             </motion.div>
             <motion.div
               animate={{ y: 100, opacity: (toppings["pepperoni"] == 3) ? 1 : 0}}
               transition={{ duration: 0 }}
-              className="cart-pizza-topping"
+              className="mypizza-topping"
             >
-              <img src={Pepperoni3} alt="img" className="cart-pizza-topping-img" />
+              <img src={Pepperoni3} alt="img" className="mypizza-topping-img" />
             </motion.div>
             <motion.div
               animate={{ y: 100, opacity: (toppings["pepperoni"] == 4) ? 1 : 0}}
               transition={{ duration: 0 }}
-              className="cart-pizza-topping"
+              className="mypizza-topping"
             >
-              <img src={Pepperoni4} alt="img" className="cart-pizza-topping-img" />
+              <img src={Pepperoni4} alt="img" className="mypizza-topping-img" />
             </motion.div>
           </>
           <> {/* olive */}
             <motion.div
               animate={{y: 100, opacity: (toppings["olive"] == 1) ? 1 : 0}}
               transition={{ duration: 0 }}
-              className="cart-pizza-topping"
+              className="mypizza-topping"
             >
-              <img src={Olive1} alt="img" className="cart-pizza-topping-img" />
+              <img src={Olive1} alt="img" className="mypizza-topping-img" />
             </motion.div>
             <motion.div
               animate={{y: 100, opacity: (toppings["olive"] == 2) ? 1 : 0}}
               transition={{ duration: 0 }}
-              className="cart-pizza-topping"
+              className="mypizza-topping"
             >
-              <img src={Olive2} alt="img" className="cart-pizza-topping-img" />
+              <img src={Olive2} alt="img" className="mypizza-topping-img" />
             </motion.div>
             <motion.div
               animate={{y: 100, opacity: (toppings["olive"] == 3) ? 1 : 0}}
               transition={{ duration: 0 }}
-              className="cart-pizza-topping"
+              className="mypizza-topping"
             >
-              <img src={Olive3} alt="img" className="cart-pizza-topping-img" />
+              <img src={Olive3} alt="img" className="mypizza-topping-img" />
             </motion.div>
             <motion.div
               animate={{y: 100, opacity: (toppings["olive"] == 4) ? 1 : 0}}
               transition={{ duration: 0 }}
-              className="cart-pizza-topping"
+              className="mypizza-topping"
             >
-              <img src={Olive4} alt="img" className="cart-pizza-topping-img" />
+              <img src={Olive4} alt="img" className="mypizza-topping-img" />
             </motion.div>
           </>
           <> {/* corn */}
             <motion.div
               animate={{y: 100, opacity: (toppings["corn"] == 1) ? 1 : 0}}
               transition={{ duration: 0 }}
-              className="cart-pizza-topping"
+              className="mypizza-topping"
             >
-              <img src={Corn1} alt="img" className="cart-pizza-topping-img" />
+              <img src={Corn1} alt="img" className="mypizza-topping-img" />
             </motion.div><motion.div
               animate={{y: 100, opacity: (toppings["corn"] == 2) ? 1 : 0}}
               transition={{ duration: 0 }}
-              className="cart-pizza-topping"
+              className="mypizza-topping"
             >
-              <img src={Corn2} alt="img" className="cart-pizza-topping-img" />
+              <img src={Corn2} alt="img" className="mypizza-topping-img" />
             </motion.div>
             <motion.div
               animate={{y: 100, opacity: (toppings["corn"] == 3) ? 1 : 0}}
               transition={{ duration: 0 }}
-              className="cart-pizza-topping"
+              className="mypizza-topping"
             >
-              <img src={Corn3} alt="img" className="cart-pizza-topping-img" />
+              <img src={Corn3} alt="img" className="mypizza-topping-img" />
             </motion.div>
             <motion.div
               animate={{y: 100, opacity: (toppings["corn"] == 4) ? 1 : 0}}
               transition={{ duration: 0 }}
-              className="cart-pizza-topping"
+              className="mypizza-topping"
             >
-              <img src={Corn4} alt="img" className="cart-pizza-topping-img" />
+              <img src={Corn4} alt="img" className="mypizza-topping-img" />
             </motion.div>
           </>
           <> {/* mashroom */}
@@ -171,186 +171,186 @@ function Pizza({toppings}) {
               initial={{ opacity: 0 }}
               animate={{y: 100, opacity: (toppings["mushroom"] == 1) ? 1 : 0}}
               transition={{ duration: 0 }}
-              className="cart-pizza-topping"
+              className="mypizza-topping"
             >
-              <img src={Mushroom1} alt="img" className="cart-pizza-topping-img" />
+              <img src={Mushroom1} alt="img" className="mypizza-topping-img" />
             </motion.div>
             <motion.div
               initial={{ opacity: 0 }}
               animate={{y: 100, opacity: (toppings["mushroom"] == 2) ? 1 : 0}}
               transition={{ duration: 0 }}
-              className="cart-pizza-topping"
+              className="mypizza-topping"
             >
-              <img src={Mushroom2} alt="img" className="cart-pizza-topping-img" />
+              <img src={Mushroom2} alt="img" className="mypizza-topping-img" />
             </motion.div>
             <motion.div
               initial={{ opacity: 0 }}
               animate={{y: 100, opacity: (toppings["mushroom"] == 3) ? 1 : 0}}
               transition={{ duration: 0 }}
-              className="cart-pizza-topping"
+              className="mypizza-topping"
             >
-              <img src={Mushroom3} alt="img" className="cart-pizza-topping-img" />
+              <img src={Mushroom3} alt="img" className="mypizza-topping-img" />
             </motion.div>
             <motion.div
               initial={{ opacity: 0 }}
               animate={{y: 100, opacity: (toppings["mushroom"] == 4) ? 1 : 0}}
               transition={{ duration: 0 }}
-              className="cart-pizza-topping"
+              className="mypizza-topping"
             >
-              <img src={Mushroom4} alt="img" className="cart-pizza-topping-img" />
+              <img src={Mushroom4} alt="img" className="mypizza-topping-img" />
             </motion.div>
           </>
           <> {/* greenPapper */}
             <motion.div
               animate={{y: 100, opacity: (toppings["green pepper"] == 1) ? 1 : 0}}
               transition={{ duration: 0 }}
-              className="cart-pizza-topping"
+              className="mypizza-topping"
             >
-            <img src={GreenPepper1} alt="img" className="cart-pizza-topping-img" />
+            <img src={GreenPepper1} alt="img" className="mypizza-topping-img" />
             </motion.div>
               <motion.div
                 animate={{y: 100, opacity: (toppings["green pepper"] == 2) ? 1 : 0}}
                 transition={{ duration: 0 }}
-                className="cart-pizza-topping"
+                className="mypizza-topping"
               >
-              <img src={GreenPepper2} alt="img" className="cart-pizza-topping-img" />
+              <img src={GreenPepper2} alt="img" className="mypizza-topping-img" />
             </motion.div>
               <motion.div
                 animate={{y: 100, opacity: (toppings["green pepper"] == 3) ? 1 : 0}}
                 transition={{ duration: 0 }}
-                className="cart-pizza-topping"
+                className="mypizza-topping"
               >
-              <img src={GreenPepper3} alt="img" className="cart-pizza-topping-img" />
+              <img src={GreenPepper3} alt="img" className="mypizza-topping-img" />
             </motion.div>
               <motion.div
                 animate={{y: 100, opacity: (toppings["green pepper"] == 4) ? 1 : 0}}
                 transition={{ duration: 0 }}
-                className="cart-pizza-topping"
+                className="mypizza-topping"
               >
-              <img src={GreenPepper4} alt="img" className="cart-pizza-topping-img" />
+              <img src={GreenPepper4} alt="img" className="mypizza-topping-img" />
             </motion.div>
           </>
           <> {/* jambon */}
             <motion.div
               animate={{y: 100, opacity: (toppings["jambon"] == 1) ? 1 : 0}}
               transition={{ duration: 0 }}
-              className="cart-pizza-topping"
+              className="mypizza-topping"
             >
-              <img src={Jambon1} alt="img" className="cart-pizza-topping-img" />
+              <img src={Jambon1} alt="img" className="mypizza-topping-img" />
             </motion.div>
             <motion.div
               animate={{y: 100, opacity: (toppings["jambon"] == 2) ? 1 : 0}}
               transition={{ duration: 0 }}
-              className="cart-pizza-topping"
+              className="mypizza-topping"
             >
-              <img src={Jambon2} alt="img" className="cart-pizza-topping-img" />
+              <img src={Jambon2} alt="img" className="mypizza-topping-img" />
             </motion.div>
             <motion.div
               animate={{y: 100, opacity: (toppings["jambon"] == 3) ? 1 : 0}}
               transition={{ duration: 0 }}
-              className="cart-pizza-topping"
+              className="mypizza-topping"
             >
-              <img src={Jambon3} alt="img" className="cart-pizza-topping-img" />
+              <img src={Jambon3} alt="img" className="mypizza-topping-img" />
             </motion.div>
             <motion.div
               animate={{y: 100, opacity: (toppings["jambon"] == 4) ? 1 : 0}}
               transition={{ duration: 0 }}
-              className="cart-pizza-topping"
+              className="mypizza-topping"
             >
-              <img src={Jambon4} alt="img" className="cart-pizza-topping-img" />
+              <img src={Jambon4} alt="img" className="mypizza-topping-img" />
             </motion.div>
           </>
           <> {/* bacon */}
             <motion.div
               animate={{y: 100, opacity: (toppings["bacon"] == 1) ? 1 : 0}}
               transition={{ duration: 0 }}
-              className="cart-pizza-topping"
+              className="mypizza-topping"
             >
-              <img src={Bacon1} alt="img" className="cart-pizza-topping-img" />
+              <img src={Bacon1} alt="img" className="mypizza-topping-img" />
             </motion.div>
             <motion.div
               animate={{y: 100, opacity: (toppings["bacon"] == 2) ? 1 : 0}}
               transition={{ duration: 0 }}
-              className="cart-pizza-topping"
+              className="mypizza-topping"
             >
-              <img src={Bacon2} alt="img" className="cart-pizza-topping-img" />
+              <img src={Bacon2} alt="img" className="mypizza-topping-img" />
             </motion.div>
             <motion.div
               animate={{y: 100, opacity: (toppings["bacon"] == 3) ? 1 : 0}}
               transition={{ duration: 0 }}
-              className="cart-pizza-topping"
+              className="mypizza-topping"
             >
-              <img src={Bacon3} alt="img" className="cart-pizza-topping-img" />
+              <img src={Bacon3} alt="img" className="mypizza-topping-img" />
             </motion.div>
             <motion.div
               animate={{y: 100, opacity: (toppings["bacon"] == 4) ? 1 : 0}}
               transition={{ duration: 0 }}
-              className="cart-pizza-topping"
+              className="mypizza-topping"
             >
-              <img src={Bacon4} alt="img" className="cart-pizza-topping-img" />
+              <img src={Bacon4} alt="img" className="mypizza-topping-img" />
             </motion.div>
           </>
           <> {/* sausage */}
             <motion.div
               animate={{y: 100, opacity: (toppings["sausage"] == 1) ? 1 : 0}}
               transition={{ duration: 0 }}
-              className="cart-pizza-topping"
+              className="mypizza-topping"
             >
-              <img src={Sausage1} alt="img" className="cart-pizza-topping-img" />
+              <img src={Sausage1} alt="img" className="mypizza-topping-img" />
             </motion.div>
             <motion.div
               animate={{y: 100, opacity: (toppings["sausage"] == 2) ? 1 : 0}}
               transition={{ duration: 0 }}
-              className="cart-pizza-topping"
+              className="mypizza-topping"
             >
-              <img src={Sausage2} alt="img" className="cart-pizza-topping-img" />
+              <img src={Sausage2} alt="img" className="mypizza-topping-img" />
             </motion.div>
             <motion.div
               animate={{y: 100, opacity: (toppings["sausage"] == 3) ? 1 : 0}}
               transition={{ duration: 0 }}
-              className="cart-pizza-topping"
+              className="mypizza-topping"
             >
-              <img src={Sausage3} alt="img" className="cart-pizza-topping-img" />
+              <img src={Sausage3} alt="img" className="mypizza-topping-img" />
             </motion.div>
             <motion.div
               animate={{y: 100, opacity: (toppings["sausage"] == 4) ? 1 : 0}}
               transition={{ duration: 0 }}
-              className="cart-pizza-topping"
+              className="mypizza-topping"
             >
-              <img src={Sausage4} alt="img" className="cart-pizza-topping-img" />
+              <img src={Sausage4} alt="img" className="mypizza-topping-img" />
             </motion.div>
           </>
           <> {/* tomato */}
             <motion.div
               animate={{y: 100, opacity: (toppings["tomato"] == 1) ? 1 : 0}}
               transition={{ duration: 0 }}
-              className="cart-pizza-topping"
+              className="mypizza-topping"
             >
-              <img src={Tomato1} alt="img" className="cart-pizza-topping-img" />
+              <img src={Tomato1} alt="img" className="mypizza-topping-img" />
             </motion.div>
             <motion.div
               animate={{y: 100, opacity: (toppings["tomato"] == 2) ? 1 : 0}}
               transition={{ duration: 0 }}
-              className="cart-pizza-topping"
+              className="mypizza-topping"
             >
-              <img src={Tomato2} alt="img" className="cart-pizza-topping-img" />
+              <img src={Tomato2} alt="img" className="mypizza-topping-img" />
             </motion.div>
             <motion.div
               animate={{y: 100, opacity: (toppings["tomato"] == 3) ? 1 : 0}}
               transition={{ duration: 0 }}
-              className="cart-pizza-topping"
+              className="mypizza-topping"
             >
-              <img src={Tomato3} alt="img" className="cart-pizza-topping-img" />
+              <img src={Tomato3} alt="img" className="mypizza-topping-img" />
             </motion.div>
             <motion.div
               animate={{y: 100, opacity: (toppings["tomato"] == 4) ? 1 : 0}}
               transition={{ duration: 0 }}
-              className="cart-pizza-topping"
+              className="mypizza-topping"
             >
-              <img src={Tomato4} alt="img" className="cart-pizza-topping-img" />
+              <img src={Tomato4} alt="img" className="mypizza-topping-img" />
             </motion.div>
           </>
-          <img src={Crust} alt="img" className="cart-pizza-topping-img" />
+          <img src={Crust} alt="img" className="mypizza-topping-img" />
         </div>
       </div>
   );

@@ -2,46 +2,107 @@ import ShowMyPizza from '../components/mypizza/index.js'
 import React from "react";
 import { useState, useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
+import { renderMatches } from 'react-router';
+import '../styles/mypizza.css'
+
 
 const MyPizza = () => {
-  const [mypizza, setMyPizza] = useState(
-    {'mypizza': []})
-  
+  const [mypizzas, setMyPizzas] = useState([])  
 
   const add_pizza_to_my_pizza = async (pizza_id) => {
       try {
-        } 
-        catch (error) {
-          // Handle any error that occurred during the request
+        const user_token = localStorage.getItem("token");
+        const data = {
+            pizza_id: pizza_id
         }
+        const response = await fetch('${process.env.REACT_APP_API_URI}:${process.env.REACT_APP_API_PORT}/myPizza/add-pizza-to-my_pizza/', {//todo
+          method: 'POST',
+          body: JSON.stringify(data),
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Token ' + user_token,
+          }
+        });
+        const result = await response.json();
+        get_my_pizzas()
+      } 
+      catch (error) {
+        // Handle any error that occurred during the request
+        console.error('Error:', error);
+      }
   }
 
 
   const delete_pizza_from_my_pizza = async (pizza_id) => {
       try {
+        const user_token = localStorage.getItem("token");
+        const data = {
+            pizza_id: pizza_id
+        }
+        const response = await fetch('${process.env.REACT_APP_API_URI}:${process.env.REACT_APP_API_PORT}/myPizza/delete_pizza_from_my_pizza/', {//todo
+          method: 'POST',
+          body: JSON.stringify(data),
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Token ' + user_token,
+          }
+        });
+        const result = await response.json();
+        get_my_pizzas()
         } 
         catch (error) {
+          console.error('Error:', error);
         }
   }
 
 
   const get_my_pizzas = async () => {
         try {
+          const user_token = localStorage.getItem("token");
+          const response = await fetch('${process.env.REACT_APP_API_URI}:${process.env.REACT_APP_API_PORT}/myPizza/get_my_pizzas/', {//todo
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Token ' + user_token,
+          }
+        });
+        const result = await response.json();
+        setMyPizzas(result);//todo
         } 
         catch (error) {
+          console.error('Error:', error);
         }
   }
 
-//   useEffect(() => {
-//     const token = localStorage.getItem("token");
-//     if (token)
-//     getMyPizzas();
-//   }, []);
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    if (token) get_my_pizzas();
+  }, []);
+
+  const handle_rows = (mypizzas) => {
+    const rows = []
+    for(var i=0; i < mypizzas.length; i++) {
+      if (i % 4 == 0) {
+        rows.push([])
+      }
+      rows[Math.floor(i/4)].push(mypizzas[i])
+    }
+    return rows
+  }
+
 
   return (
-    <ShowMyPizza
-        mypizza={mypizza}
-    />
+    <>
+      {handle_rows(mypizzas).map((row)=>(
+        <div className='row'>
+          {row.map((pizza)=>(
+            <ShowMyPizza
+              mypizza={pizza}
+            />  
+          ))}
+        </div>
+      ))}
+    </>
   );
 };
 
