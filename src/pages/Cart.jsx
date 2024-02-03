@@ -34,7 +34,7 @@ const Cart = () => {
           const data = {
               pizza_id: pizza_id
           }
-          const response = await fetch('${process.env.REACT_APP_API_URI}:${process.env.REACT_APP_API_PORT}/cart/add-pizza-from-cart/', {
+          const response = await fetch('${process.env.REACT_APP_API_URI}:${process.env.REACT_APP_API_PORT}/cart/add-exits-pizza-to-cart/', {
             method: 'POST',
             body: JSON.stringify(data),
             headers: {
@@ -57,7 +57,7 @@ const Cart = () => {
           const data = {
               pizza_id: pizza_id
           }
-          const response = await fetch('${process.env.REACT_APP_API_URI}:${process.env.REACT_APP_API_PORT}/cart/sub-pizza-from-cart/', {
+          const response = await fetch('${process.env.REACT_APP_API_URI}:${process.env.REACT_APP_API_PORT}/cart/add-exits-pizza-to-cart/', {
             method: 'POST',
             body: JSON.stringify(data),
             headers: {
