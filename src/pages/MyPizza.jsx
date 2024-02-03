@@ -28,8 +28,7 @@ const MyPizza = () => {
           'Authorization': 'Token ' + user_token,
         }
       });
-      const result = await response.json();
-
+      alert("Added to cart successfully")
     } 
     catch (error) {
       // Handle any error that occurred during the request
@@ -51,8 +50,7 @@ const MyPizza = () => {
           }
         });
         const result = await response.json();
-        console.log(result)
-        setMyPizzas(result);//todo
+        setMyPizzas(result);
         } 
         catch (error) {
           console.error('Error:', error);
@@ -66,6 +64,7 @@ const MyPizza = () => {
 
   const handle_rows = (mypizzas) => {
     const rows = []
+    console.log(mypizzas['mypizza'])
     for(var i=0; i < mypizzas['mypizza'].length; i++) {
       if (i % 4 == 0) {
         rows.push([])
@@ -75,6 +74,7 @@ const MyPizza = () => {
     return rows
   }
 
+  console.log(handle_rows(mypizzas))
 
   return (
     <div style={{}}>

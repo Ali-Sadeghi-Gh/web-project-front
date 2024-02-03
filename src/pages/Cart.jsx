@@ -30,55 +30,6 @@ const Cart = () => {
       }
   }
 
-  const addPizza = async (pizza_id) => {
-      try {
-          const user_token = localStorage.getItem("token");
-          const data = {
-              pizza_id: pizza_id
-          }
-          const main_url = process.env.REACT_APP_API_URI + ':' + process.env.REACT_APP_API_PORT
-          const url = main_url + '/cart/add-exits-pizza-to-cart/'
-          const response = await fetch(url, {
-            method: 'POST',
-            body: JSON.stringify(data),
-            headers: {
-              'Content-Type': 'application/json',
-              'Authorization': 'Token ' + user_token,
-            }
-          });
-          const result = await response.json();
-        } 
-        catch (error) {
-          // Handle any error that occurred during the request
-          console.error('Error:', error);
-        }
-  }
-
-
-  const subPizza = async (pizza_id) => {
-      try {
-          const user_token = localStorage.getItem("token");
-          const data = {
-              pizza_id: pizza_id
-          }
-
-          const main_url = process.env.REACT_APP_API_URI + ':' + process.env.REACT_APP_API_PORT
-          const url = main_url + '/cart/add-exits-pizza-to-cart/'
-          const response = await fetch(url, {
-            method: 'POST',
-            body: JSON.stringify(data),
-            headers: {
-              'Content-Type': 'application/json',
-              'Authorization': 'Token ' + user_token,
-            }
-          });
-          const result = await response.json();
-        } 
-        catch (error) {
-          // Handle any error that occurred during the request
-          console.error('Error:', error);
-        }
-  }
 
 
   const getActiveCart = async () => {
@@ -94,7 +45,7 @@ const Cart = () => {
           'Authorization': 'Token ' + user_token,
         }
       });
-
+      
       const result = await response.json();
       const cart = result["cart"]
       set_my_cart(cart)
@@ -105,6 +56,57 @@ const Cart = () => {
     }
     
   }
+
+  const addPizza = async (pizza_id) => {
+    try {
+        const user_token = localStorage.getItem("token");
+        const data = {
+            pizza_id: pizza_id
+        }
+        const main_url = process.env.REACT_APP_API_URI + ':' + process.env.REACT_APP_API_PORT
+        const url = main_url + '/cart/add-exits-pizza-to-cart/'
+        const response = await fetch(url, {
+          method: 'POST',
+          body: JSON.stringify(data),
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Token ' + user_token,
+          }
+        });
+        getActiveCart()
+      } 
+      catch (error) {
+        // Handle any error that occurred during the request
+        console.error('Error:', error);
+      }
+}
+
+
+const subPizza = async (pizza_id) => {
+    try {
+        const user_token = localStorage.getItem("token");
+        const data = {
+            pizza_id: pizza_id
+        }
+
+        const main_url = process.env.REACT_APP_API_URI + ':' + process.env.REACT_APP_API_PORT
+        const url = main_url + '/cart/sub-exits-pizza-from-cart/'
+        const response = await fetch(url, {
+          method: 'POST',
+          body: JSON.stringify(data),
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Token ' + user_token,
+          }
+        });
+        getActiveCart()
+      } 
+      catch (error) {
+        // Handle any error that occurred during the request
+        console.error('Error:', error);
+      }
+}
+
 
   useEffect(() => {
     const token = localStorage.getItem("token");

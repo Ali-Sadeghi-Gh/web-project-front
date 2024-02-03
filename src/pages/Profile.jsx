@@ -14,7 +14,7 @@ const Profile = () => {
     }
   )
 
-  const getProfile = async () =>{
+  const getProfile = async () => {
   try {
     const user_token = localStorage.getItem("token");
     const main_url = process.env.REACT_APP_API_URI + ':' + process.env.REACT_APP_API_PORT
@@ -29,6 +29,30 @@ const Profile = () => {
     });
     const result = await response.json();
     set_my_datas(result)
+  } 
+  catch (error) {
+    // Handle any error that occurred during the request
+    console.error('Error:', error);
+  }
+}
+
+const change_address = async (address) => {
+  try {
+    console.log(address)
+    const user_token = localStorage.getItem("token");
+    const main_url = process.env.REACT_APP_API_URI + ':' + process.env.REACT_APP_API_PORT
+    const url = main_url + '/user/change-address/'
+    const data = {
+      address: address
+    }
+    const response = await fetch(url, {
+      method: 'POST',
+      body: JSON.stringify(data),
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': 'Token ' + user_token,
+      }
+    });
   } 
   catch (error) {
     // Handle any error that occurred during the request
@@ -108,7 +132,7 @@ useEffect(() => {
         </div>
         <input
           placeholder={datas['address']}
-          className={"profile-inputBox"} disabled/>
+          className={"profile-inputBox"} onChange={(e) => change_address(e.target.value)}/>
       </div>
     </div>
   );

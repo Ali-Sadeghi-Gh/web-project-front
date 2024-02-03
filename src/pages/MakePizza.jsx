@@ -38,21 +38,18 @@ function Pizzas() {
   };
 
   useEffect(() => {
-    // load toppings saved from local storage
     const data = localStorage.getItem("toppings");
     if (data)
       setToppings(JSON.parse(data));
   }, []);
 
   useEffect(() => {
-    // load price saved from local storage
     const data = localStorage.getItem("price");
     if (data)
       setPrice(JSON.parse(data));
   }, []);
 
   useEffect(() => {
-    // load price saved from local storage
     const data = localStorage.getItem("pizzaName");
     if (data)
       setPizzaName(JSON.parse(data));

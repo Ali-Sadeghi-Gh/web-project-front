@@ -38,7 +38,7 @@ const Signup = (props) => {
             setFnameError("Please enter first name")
             return
         }
-        if ("" === username) {
+        if ("" === lname) {
             setLnameError("Please enter last name")
             return
         }
@@ -46,7 +46,6 @@ const Signup = (props) => {
             setUsernameError("Please enter your username")
             return
         }
-
         if ("" === password) {
             setPasswordError("Please enter a password")
             return
@@ -85,6 +84,32 @@ const Signup = (props) => {
 
         if ("" === address) {
             setAddressError("Please enter your address")
+            return
+        }
+
+        
+        try {
+            const data = {
+                username: username
+            };
+            const main_url = process.env.REACT_APP_API_URI + ':' + process.env.REACT_APP_API_PORT
+            const url = main_url + '/user/duplicate-username/'
+            const response = await fetch(url, {
+              method: 'POST',
+              body: JSON.stringify(data),
+              headers: {
+                'Content-Type': 'application/json'
+              }
+            });
+            const result = await response.json();
+            console.log(result['duplicated'] == 'false')
+            if (result['duplicated'] == 'true'){
+                setUsernameError("Duplicate username")
+                return
+            }
+        } 
+        catch (error) {
+            console.error('Error:', error);
             return
         }
 
@@ -132,16 +157,18 @@ const Signup = (props) => {
                 placeholder="first name"
                 onChange={ev => setFname(ev.target.value)}
                 className={"inputBox"} />
-            <label className="errorLabel">{usernameError}</label>
+            <label className="errorLabel">{fnameError}</label>
         </div>
+        <br />
         <div className={"inputContainer"}>
             <input
                 value={lname}
                 placeholder="last name"
                 onChange={ev => setLname(ev.target.value)}
                 className={"inputBox"} />
-            <label className="errorLabel">{usernameError}</label>
+            <label className="errorLabel">{lnameError}</label>
         </div>
+        <br />
         <div className={"inputContainer"}>
             <input
                 value={username}

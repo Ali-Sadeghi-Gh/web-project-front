@@ -10,7 +10,7 @@ function ShowCart({cart, price, onclick_payoff, addPizza, subPizza}) {
             {cart.map((item) => (
                 <div>
                     <div className='cart-leftdiv'>
-                      <button  style={{borderRadius: '16px', width:'20%', height: '50%', textAlign: 'center', backgroundColor: 'red', marginLeft: '70%', marginTop: '20%'}} onClick={subPizza(item['pizza_id'])}> - </button>
+                      <button  style={{borderRadius: '16px', width:'20%', height: '50%', textAlign: 'center', backgroundColor: 'red', marginLeft: '70%', marginTop: '20%'}} onClick={() => subPizza(item['pizza_id'])}> - </button>
                     </div>
 
 
@@ -18,12 +18,16 @@ function ShowCart({cart, price, onclick_payoff, addPizza, subPizza}) {
                          <Pizza
                              toppings={item}
                         />    
+
+                        <div style={{textAlign: 'center', fontFamily: 'Times New Roman, Times, serif', marginTop: '1%'}}>
+                            name: {item['name']}
+                        </div>
                         <div style={{textAlign: 'center', fontFamily: 'Times New Roman, Times, serif', }}>
-                            {item['quantity']}: {item['name']}
+                            quantity: {item['quantity']}
                         </div>
                     </div>
                     <div className='cart-rightdiv'>
-                     <button  style={{borderRadius: '16px', width:'20%', height: '50%', textAlign: 'center', backgroundColor: 'green', marginLeft: '5%', marginTop: '20%'}} onClick={addPizza(item['pizza_id'])}> + </button>
+                     <button  style={{borderRadius: '16px', width:'20%', height: '50%', textAlign: 'center', backgroundColor: 'green', marginLeft: '5%', marginTop: '20%'}} onClick={() => addPizza(item['pizza_id'])}> + </button>
                     </div>
                     <br/>
                     <br/>
