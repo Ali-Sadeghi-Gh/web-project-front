@@ -48,10 +48,14 @@ const Login = (props) => {
             });
             const result = await response.json();
             const token = result["token"]
-            alert("You login successfully")
-            localStorage.setItem("token", token);
-            navigate('/home');
-            window.location.reload(false);
+            if (token != undefined) {
+                alert("You login successfully")
+                localStorage.setItem("token", token);
+                navigate('/home');
+                window.location.reload(false);
+            } else {
+                alert("cannot connect to server")
+            }
         } 
         catch (error) {
             console.error('Error:', error);

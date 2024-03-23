@@ -134,11 +134,14 @@ const Signup = (props) => {
             });
             const result = await response.json();
             const token = result["token"]
-            alert("You signed up successfully")
-            console.log(token)
-            localStorage.setItem("token", token);
-            navigate('/home');
-
+            if (token != undefined) {
+                alert("You signed up successfully")
+                console.log(token)
+                localStorage.setItem("token", token);
+                navigate('/home');
+            } else {
+                alert("cannot connect to server")
+            }
         } 
         catch (error) {
             console.error('Error:', error);

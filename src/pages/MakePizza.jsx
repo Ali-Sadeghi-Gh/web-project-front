@@ -58,7 +58,7 @@ function Pizzas() {
   const updatePrice = async (newToppings) => {
     try {
       const main_url = process.env.REACT_APP_API_URI + ':' + process.env.REACT_APP_API_PORT
-      const url = main_url + '/shop/calculate-price/'
+      const url = main_url + '/pizza/calculate-price'
       const response = await fetch(url, {
         method: 'POST',
         body: JSON.stringify(newToppings),
@@ -68,9 +68,12 @@ function Pizzas() {
       });
       const result = await response.json();
       const price = result["price"]
-      let newPrice = price
-      setPrice(newPrice);
-      localStorage.setItem("price", JSON.stringify(newPrice));
+      if (price != undefined) {
+        setPrice(price);
+        localStorage.setItem("price", JSON.stringify(price));
+      } else {
+        alert("cannot connect to server")
+      }
     } 
     catch (error) {
       // Handle any error that occurred during the request

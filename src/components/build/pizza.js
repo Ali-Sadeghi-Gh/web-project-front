@@ -49,6 +49,7 @@ function Pizza({toppings}) {
         <div className="pizza" >
           <> {/* cheese */}
             <motion.div
+              initial={{ opacity: 0 ,y: 100,}}
               animate={{ y: 100, opacity: (toppings["cheese"] == 1) ? 1 : 0}}
               transition={{ duration: 0 }}
               className="pizza-topping"
@@ -56,6 +57,7 @@ function Pizza({toppings}) {
               <img src={Cheese1} alt="img" className="pizza-topping-img" />
             </motion.div>
             <motion.div
+              initial={{ opacity: 0 ,y: 100,}}
               animate={{ y: 100, opacity: (toppings["cheese"] == 2) ? 1 : 0}}
               transition={{ duration: 0 }}
               className="pizza-topping"
@@ -63,6 +65,7 @@ function Pizza({toppings}) {
               <img src={Cheese2} alt="img" className="pizza-topping-img" />
             </motion.div>
             <motion.div
+              initial={{ opacity: 0 ,y: 100,}}
               animate={{ y: 100, opacity: (toppings["cheese"] == 3) ? 1 : 0}}
               transition={{ duration: 0 }}
               className="pizza-topping"
@@ -70,6 +73,7 @@ function Pizza({toppings}) {
               <img src={Cheese3} alt="img" className="pizza-topping-img" />
             </motion.div>
             <motion.div
+              initial={{ opacity: 0 ,y: 100,}}
               animate={{ y: 100, opacity: (toppings["cheese"] == 4) ? 1 : 0}}
               transition={{ duration: 0 }}
               className="pizza-topping"
@@ -79,6 +83,7 @@ function Pizza({toppings}) {
           </>
           <> {/* pepperoni */}
             <motion.div
+              initial={{ opacity: 0 ,y: 100,}}
               animate={{ y: 100, opacity: (toppings["pepperoni"] == 1) ? 1 : 0}}
               transition={{ duration: 0 }}
               className="pizza-topping"
@@ -86,6 +91,7 @@ function Pizza({toppings}) {
               <img src={Pepperoni1} alt="img" className="pizza-topping-img" />
             </motion.div>
             <motion.div
+              initial={{ opacity: 0 ,y: 100,}}
               animate={{ y: 100, opacity: (toppings["pepperoni"] == 2) ? 1 : 0}}
               transition={{ duration: 0 }}
               className="pizza-topping"
@@ -93,6 +99,7 @@ function Pizza({toppings}) {
               <img src={Pepperoni2} alt="img" className="pizza-topping-img" />
             </motion.div>
             <motion.div
+              initial={{ opacity: 0 ,y: 100,}}
               animate={{ y: 100, opacity: (toppings["pepperoni"] == 3) ? 1 : 0}}
               transition={{ duration: 0 }}
               className="pizza-topping"
@@ -100,6 +107,7 @@ function Pizza({toppings}) {
               <img src={Pepperoni3} alt="img" className="pizza-topping-img" />
             </motion.div>
             <motion.div
+              initial={{ opacity: 0 ,y: 100,}}
               animate={{ y: 100, opacity: (toppings["pepperoni"] == 4) ? 1 : 0}}
               transition={{ duration: 0 }}
               className="pizza-topping"
@@ -109,6 +117,7 @@ function Pizza({toppings}) {
           </>
           <> {/* olive */}
             <motion.div
+              initial={{ opacity: 0 ,y: 100,}}
               animate={{y: 100, opacity: (toppings["olive"] == 1) ? 1 : 0}}
               transition={{ duration: 0 }}
               className="pizza-topping"
@@ -116,6 +125,7 @@ function Pizza({toppings}) {
               <img src={Olive1} alt="img" className="pizza-topping-img" />
             </motion.div>
             <motion.div
+              initial={{ opacity: 0 ,y: 100,}}
               animate={{y: 100, opacity: (toppings["olive"] == 2) ? 1 : 0}}
               transition={{ duration: 0 }}
               className="pizza-topping"
@@ -123,6 +133,7 @@ function Pizza({toppings}) {
               <img src={Olive2} alt="img" className="pizza-topping-img" />
             </motion.div>
             <motion.div
+              initial={{ opacity: 0 ,y: 100,}}
               animate={{y: 100, opacity: (toppings["olive"] == 3) ? 1 : 0}}
               transition={{ duration: 0 }}
               className="pizza-topping"
@@ -130,6 +141,7 @@ function Pizza({toppings}) {
               <img src={Olive3} alt="img" className="pizza-topping-img" />
             </motion.div>
             <motion.div
+              initial={{ opacity: 0 ,y: 100,}}
               animate={{y: 100, opacity: (toppings["olive"] == 4) ? 1 : 0}}
               transition={{ duration: 0 }}
               className="pizza-topping"
@@ -139,12 +151,15 @@ function Pizza({toppings}) {
           </>
           <> {/* corn */}
             <motion.div
+              initial={{ opacity: 0 ,y: 100,}}
               animate={{y: 100, opacity: (toppings["corn"] == 1) ? 1 : 0}}
               transition={{ duration: 0 }}
               className="pizza-topping"
             >
               <img src={Corn1} alt="img" className="pizza-topping-img" />
-            </motion.div><motion.div
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0 ,y: 100,}}
               animate={{y: 100, opacity: (toppings["corn"] == 2) ? 1 : 0}}
               transition={{ duration: 0 }}
               className="pizza-topping"
@@ -152,6 +167,7 @@ function Pizza({toppings}) {
               <img src={Corn2} alt="img" className="pizza-topping-img" />
             </motion.div>
             <motion.div
+              initial={{ opacity: 0 ,y: 100,}}
               animate={{y: 100, opacity: (toppings["corn"] == 3) ? 1 : 0}}
               transition={{ duration: 0 }}
               className="pizza-topping"
@@ -159,6 +175,7 @@ function Pizza({toppings}) {
               <img src={Corn3} alt="img" className="pizza-topping-img" />
             </motion.div>
             <motion.div
+              initial={{ opacity: 0 ,y: 100,}}
               animate={{y: 100, opacity: (toppings["corn"] == 4) ? 1 : 0}}
               transition={{ duration: 0 }}
               className="pizza-topping"
@@ -168,7 +185,7 @@ function Pizza({toppings}) {
           </>
           <> {/* mashroom */}
             <motion.div
-              initial={{ opacity: 0 }}
+              initial={{ opacity: 0 ,y: 100,}}
               animate={{y: 100, opacity: (toppings["mushroom"] == 1) ? 1 : 0}}
               transition={{ duration: 0 }}
               className="pizza-topping"
@@ -176,7 +193,7 @@ function Pizza({toppings}) {
               <img src={Mushroom1} alt="img" className="pizza-topping-img" />
             </motion.div>
             <motion.div
-              initial={{ opacity: 0 }}
+              initial={{ opacity: 0 ,y: 100,}}
               animate={{y: 100, opacity: (toppings["mushroom"] == 2) ? 1 : 0}}
               transition={{ duration: 0 }}
               className="pizza-topping"
@@ -184,7 +201,7 @@ function Pizza({toppings}) {
               <img src={Mushroom2} alt="img" className="pizza-topping-img" />
             </motion.div>
             <motion.div
-              initial={{ opacity: 0 }}
+              initial={{ opacity: 0 ,y: 100,}}
               animate={{y: 100, opacity: (toppings["mushroom"] == 3) ? 1 : 0}}
               transition={{ duration: 0 }}
               className="pizza-topping"
@@ -192,7 +209,7 @@ function Pizza({toppings}) {
               <img src={Mushroom3} alt="img" className="pizza-topping-img" />
             </motion.div>
             <motion.div
-              initial={{ opacity: 0 }}
+              initial={{ opacity: 0 ,y: 100,}}
               animate={{y: 100, opacity: (toppings["mushroom"] == 4) ? 1 : 0}}
               transition={{ duration: 0 }}
               className="pizza-topping"
@@ -202,6 +219,7 @@ function Pizza({toppings}) {
           </>
           <> {/* greenPapper */}
             <motion.div
+              initial={{ opacity: 0 ,y: 100,}}
               animate={{y: 100, opacity: (toppings["greenPepper"] == 1) ? 1 : 0}}
               transition={{ duration: 0 }}
               className="pizza-topping"
@@ -209,6 +227,7 @@ function Pizza({toppings}) {
             <img src={GreenPepper1} alt="img" className="pizza-topping-img" />
             </motion.div>
               <motion.div
+                initial={{ opacity: 0 ,y: 100,}}
                 animate={{y: 100, opacity: (toppings["greenPepper"] == 2) ? 1 : 0}}
                 transition={{ duration: 0 }}
                 className="pizza-topping"
@@ -216,6 +235,7 @@ function Pizza({toppings}) {
               <img src={GreenPepper2} alt="img" className="pizza-topping-img" />
             </motion.div>
               <motion.div
+                initial={{ opacity: 0 ,y: 100,}}
                 animate={{y: 100, opacity: (toppings["greenPepper"] == 3) ? 1 : 0}}
                 transition={{ duration: 0 }}
                 className="pizza-topping"
@@ -223,6 +243,7 @@ function Pizza({toppings}) {
               <img src={GreenPepper3} alt="img" className="pizza-topping-img" />
             </motion.div>
               <motion.div
+                initial={{ opacity: 0 ,y: 100,}}
                 animate={{y: 100, opacity: (toppings["greenPepper"] == 4) ? 1 : 0}}
                 transition={{ duration: 0 }}
                 className="pizza-topping"
@@ -232,6 +253,7 @@ function Pizza({toppings}) {
           </>
           <> {/* jambon */}
             <motion.div
+              initial={{ opacity: 0 ,y: 100,}}
               animate={{y: 100, opacity: (toppings["jambon"] == 1) ? 1 : 0}}
               transition={{ duration: 0 }}
               className="pizza-topping"
@@ -239,6 +261,7 @@ function Pizza({toppings}) {
               <img src={Jambon1} alt="img" className="pizza-topping-img" />
             </motion.div>
             <motion.div
+              initial={{ opacity: 0 ,y: 100,}}
               animate={{y: 100, opacity: (toppings["jambon"] == 2) ? 1 : 0}}
               transition={{ duration: 0 }}
               className="pizza-topping"
@@ -246,6 +269,7 @@ function Pizza({toppings}) {
               <img src={Jambon2} alt="img" className="pizza-topping-img" />
             </motion.div>
             <motion.div
+              initial={{ opacity: 0 ,y: 100,}}
               animate={{y: 100, opacity: (toppings["jambon"] == 3) ? 1 : 0}}
               transition={{ duration: 0 }}
               className="pizza-topping"
@@ -253,6 +277,7 @@ function Pizza({toppings}) {
               <img src={Jambon3} alt="img" className="pizza-topping-img" />
             </motion.div>
             <motion.div
+              initial={{ opacity: 0 ,y: 100,}}
               animate={{y: 100, opacity: (toppings["jambon"] == 4) ? 1 : 0}}
               transition={{ duration: 0 }}
               className="pizza-topping"
@@ -262,6 +287,7 @@ function Pizza({toppings}) {
           </>
           <> {/* bacon */}
             <motion.div
+              initial={{ opacity: 0 ,y: 100,}}
               animate={{y: 100, opacity: (toppings["bacon"] == 1) ? 1 : 0}}
               transition={{ duration: 0 }}
               className="pizza-topping"
@@ -269,6 +295,7 @@ function Pizza({toppings}) {
               <img src={Bacon1} alt="img" className="pizza-topping-img" />
             </motion.div>
             <motion.div
+              initial={{ opacity: 0 ,y: 100,}}
               animate={{y: 100, opacity: (toppings["bacon"] == 2) ? 1 : 0}}
               transition={{ duration: 0 }}
               className="pizza-topping"
@@ -276,6 +303,7 @@ function Pizza({toppings}) {
               <img src={Bacon2} alt="img" className="pizza-topping-img" />
             </motion.div>
             <motion.div
+              initial={{ opacity: 0 ,y: 100,}}
               animate={{y: 100, opacity: (toppings["bacon"] == 3) ? 1 : 0}}
               transition={{ duration: 0 }}
               className="pizza-topping"
@@ -283,6 +311,7 @@ function Pizza({toppings}) {
               <img src={Bacon3} alt="img" className="pizza-topping-img" />
             </motion.div>
             <motion.div
+              initial={{ opacity: 0 ,y: 100,}}
               animate={{y: 100, opacity: (toppings["bacon"] == 4) ? 1 : 0}}
               transition={{ duration: 0 }}
               className="pizza-topping"
@@ -292,6 +321,7 @@ function Pizza({toppings}) {
           </>
           <> {/* sausage */}
             <motion.div
+              initial={{ opacity: 0 ,y: 100,}}
               animate={{y: 100, opacity: (toppings["sausage"] == 1) ? 1 : 0}}
               transition={{ duration: 0 }}
               className="pizza-topping"
@@ -299,6 +329,7 @@ function Pizza({toppings}) {
               <img src={Sausage1} alt="img" className="pizza-topping-img" />
             </motion.div>
             <motion.div
+              initial={{ opacity: 0 ,y: 100,}}
               animate={{y: 100, opacity: (toppings["sausage"] == 2) ? 1 : 0}}
               transition={{ duration: 0 }}
               className="pizza-topping"
@@ -306,6 +337,7 @@ function Pizza({toppings}) {
               <img src={Sausage2} alt="img" className="pizza-topping-img" />
             </motion.div>
             <motion.div
+              initial={{ opacity: 0 ,y: 100,}}
               animate={{y: 100, opacity: (toppings["sausage"] == 3) ? 1 : 0}}
               transition={{ duration: 0 }}
               className="pizza-topping"
@@ -313,6 +345,7 @@ function Pizza({toppings}) {
               <img src={Sausage3} alt="img" className="pizza-topping-img" />
             </motion.div>
             <motion.div
+              initial={{ opacity: 0 ,y: 100,}}
               animate={{y: 100, opacity: (toppings["sausage"] == 4) ? 1 : 0}}
               transition={{ duration: 0 }}
               className="pizza-topping"
@@ -322,6 +355,7 @@ function Pizza({toppings}) {
           </>
           <> {/* tomato */}
             <motion.div
+              initial={{ opacity: 0 ,y: 100,}}
               animate={{y: 100, opacity: (toppings["tomato"] == 1) ? 1 : 0}}
               transition={{ duration: 0 }}
               className="pizza-topping"
@@ -329,6 +363,7 @@ function Pizza({toppings}) {
               <img src={Tomato1} alt="img" className="pizza-topping-img" />
             </motion.div>
             <motion.div
+              initial={{ opacity: 0 ,y: 100,}}
               animate={{y: 100, opacity: (toppings["tomato"] == 2) ? 1 : 0}}
               transition={{ duration: 0 }}
               className="pizza-topping"
@@ -336,6 +371,7 @@ function Pizza({toppings}) {
               <img src={Tomato2} alt="img" className="pizza-topping-img" />
             </motion.div>
             <motion.div
+              initial={{ opacity: 0 ,y: 100,}}
               animate={{y: 100, opacity: (toppings["tomato"] == 3) ? 1 : 0}}
               transition={{ duration: 0 }}
               className="pizza-topping"
@@ -343,6 +379,7 @@ function Pizza({toppings}) {
               <img src={Tomato3} alt="img" className="pizza-topping-img" />
             </motion.div>
             <motion.div
+              initial={{ opacity: 0 ,y: 100,}}
               animate={{y: 100, opacity: (toppings["tomato"] == 4) ? 1 : 0}}
               transition={{ duration: 0 }}
               className="pizza-topping"
